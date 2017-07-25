@@ -255,7 +255,7 @@
 }
 
 #pragma 添加cell
--(void)AddCell:(id)sender{
+-(void)AddCell:(id)sender {
     //do something here
     UIButton *button = sender;
     UITableViewCell *cell = (UITableViewCell *)[button superview];
@@ -265,8 +265,6 @@
     //添加的节点信息
     Node *node1 = [[Node alloc] initWithParentId:node.nodeId nodeId:node.nodeId*100+self.num  name:@"北京" depth:node.depth+1 expand:YES];
     [_data addObject:node1];
-    
-    
     NSUInteger startPosition = index.row+1;
     NSUInteger endPosition = startPosition;
     
@@ -296,8 +294,7 @@
 
 
 #pragma 删除cell
--(void)delate:(id)sender
-{
+-(void)delate:(id)sender {
     UIButton *button = (UIButton *)sender;
     
     UITableViewCell *cell = (UITableViewCell *)[button superview];
@@ -325,7 +322,7 @@
     
 }
 
--(NSUInteger)removeAllNodesAtParentNodes : (Node *)parentNode{
+-(NSUInteger)removeAllNodesAtParentNodes : (Node *)parentNode {
     NSUInteger startPosition = [_tempData indexOfObject:parentNode];
     NSUInteger endPosition = startPosition;
     
@@ -348,7 +345,6 @@
     if (endPosition == startPosition) {
         [_tempData removeObjectsInRange:NSMakeRange(startPosition, 1)];
     }
-
     return endPosition;
 }
 
