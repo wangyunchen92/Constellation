@@ -274,8 +274,6 @@
             node.expand = YES;
             break;
         }
-        
-        
     }
     [_tempData insertObject:node1 atIndex:endPosition];
     endPosition++;
