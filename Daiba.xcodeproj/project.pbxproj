@@ -1005,8 +1005,8 @@
 		54318EF31F3B0E740007357C /* More(更多) */ = {
 			isa = PBXGroup;
 			children = (
+				D53C50871F74F5F200BC0B3A /* Model */,
 				54318EF41F3B0E740007357C /* Controller */,
-				54318EF51F3B0E740007357C /* Model */,
 				54318EF61F3B0E740007357C /* View */,
 			);
 			path = "More(更多)";
@@ -1023,13 +1023,6 @@
 				54318EFE1F3B14D10007357C /* YMAboutController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		54318EF51F3B0E740007357C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		54318EF61F3B0E740007357C /* View */ = {
@@ -1520,7 +1513,7 @@
 				54318EA01F39BE700007357C /* HistoryOrder(历史订单) */,
 				54EDA72D1F29ED160007EF43 /* MessageCenter */,
 				545834B31F28BFD3009F3948 /* Controller */,
-				545834B41F28BFD3009F3948 /* Model */,
+				D53C50891F74F61D00BC0B3A /* Model */,
 				545834B51F28BFD3009F3948 /* View */,
 			);
 			path = Me;
@@ -1537,13 +1530,6 @@
 				5476497C1F35C6800002DD97 /* YMSafeSetController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		545834B41F28BFD3009F3948 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		545834B51F28BFD3009F3948 /* View */ = {
@@ -1666,8 +1652,8 @@
 		545937F41F3D49D200B2128D /* MyBankCard（我的银行卡） */ = {
 			isa = PBXGroup;
 			children = (
+				D53C50861F74F5E100BC0B3A /* Model */,
 				545937F51F3D49D200B2128D /* Controller */,
-				545937F61F3D49D200B2128D /* Model */,
 				545937F71F3D49D200B2128D /* View */,
 			);
 			path = "MyBankCard（我的银行卡）";
@@ -1681,13 +1667,6 @@
 				545937FA1F3D49FB00B2128D /* YMBankCardListController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		545937F61F3D49D200B2128D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		545937F71F3D49D200B2128D /* View */ = {
@@ -2318,6 +2297,27 @@
 				BA807CFF2779D6D96ACD2A7F /* libPods-Daiba.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D53C50861F74F5E100BC0B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D53C50871F74F5F200BC0B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D53C50891F74F61D00BC0B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

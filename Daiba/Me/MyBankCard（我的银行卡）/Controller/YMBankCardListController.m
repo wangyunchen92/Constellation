@@ -33,16 +33,19 @@
     [self requestAccountInfo];
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
   
 }
+
 -(NSMutableArray *)dataArr{
     if (!_dataArr) {
         _dataArr = [[NSMutableArray alloc]init];
     }
     return _dataArr;
 }
+
 -(UIView *)placeView{
     if (!_placeView) {
         _placeView = [UIView placeViewWhithFrame:self.tableView.frame placeImgStr:@"iconPlaceholder" placeString:@"您暂时还没有绑定银行卡！"];
@@ -59,7 +62,7 @@
     [param setObject:[kUserDefaults valueForKey:kUid] forKey:@"uid"];
     [param setObject:[kUserDefaults valueForKey:kToken] forKey:@"token"];
     [param setObject:@"bank" forKey:@"info_type"];
-    [[HttpManger sharedInstance]callHTTPReqAPI:getAccountInfoURL params:param view:self.view loading:YES tableView:self.tableView completionHandler:^(id task, id responseObject, NSError *error) {
+    [[HttpManger sharedInstance] callHTTPReqAPI:getAccountInfoURL params:param view:self.view loading:YES tableView:self.tableView completionHandler:^(id task, id responseObject, NSError *error) {
  
         weakSelf.bankModel = [BankModel mj_objectWithKeyValues:responseObject[@"data"][@"bank"]];
         if (![NSString isEmptyString:weakSelf.bankModel.bank_account]) {
@@ -68,25 +71,28 @@
         weakSelf.placeView.hidden = weakSelf.dataArr.count;
         [weakSelf.tableView reloadData];
     }];
-    
 }
+
 #pragma mark - UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 88;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
--(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
-{
+
+-(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     view.tintColor = BackGroundColor;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YMBankCardCell* cell = [YMBankCardCell shareCellWithModifyBlock:^(UIButton *btn) {
-     
+
     }];
     cell.backgroundColor = BackGroundColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
