@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="247" id="KGk-i7-Jjw" customClass="YMBackFailureCell">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="246.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3T-9Y-VyM">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Ofh-jO-ilA"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z21-lI-fS3">
+                        <rect key="frame" x="15" y="179" width="318" height="44"/>
+                        <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="2IC-gY-R7b"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="我知道了" backgroundImage="button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="sureBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Hw-fk-AqF"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06H-u7-aW3">
+                        <rect key="frame" x="0.0" y="81" width="348" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.请确认您当前绑定的中国农业银行（尾号0370）卡内余额是否大于100.18元; \n2.卡内余额充足，仍无法还款成功，建议您查看“如何还款成功”。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-BT-8y2">
+                                <rect key="frame" x="15" y="15" width="318" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qUZ-BT-8y2" secondAttribute="trailing" constant="15" id="9m6-jK-X28"/>
+                            <constraint firstAttribute="bottom" secondItem="qUZ-BT-8y2" secondAttribute="bottom" constant="10" id="Eoo-6Y-ura"/>
+                            <constraint firstItem="qUZ-BT-8y2" firstAttribute="leading" secondItem="06H-u7-aW3" secondAttribute="leading" constant="15" id="Zg7-BK-0x8"/>
+                            <constraint firstItem="qUZ-BT-8y2" firstAttribute="top" secondItem="06H-u7-aW3" secondAttribute="top" constant="15" id="aQM-PS-hnI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="06H-u7-aW3" firstAttribute="top" secondItem="z3T-9Y-VyM" secondAttribute="bottom" constant="1" id="8FQ-jb-gx8"/>
+                    <constraint firstAttribute="trailing" secondItem="z3T-9Y-VyM" secondAttribute="trailing" id="HrS-E9-B12"/>
+                    <constraint firstItem="z21-lI-fS3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RvR-dp-Lgv"/>
+                    <constraint firstItem="z21-lI-fS3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bTx-CW-l7k"/>
+                    <constraint firstItem="06H-u7-aW3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lV1-qU-SLC"/>
+                    <constraint firstItem="z21-lI-fS3" firstAttribute="top" secondItem="06H-u7-aW3" secondAttribute="bottom" constant="30" id="m6W-mo-anV"/>
+                    <constraint firstItem="z3T-9Y-VyM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="njR-Ni-J5O"/>
+                    <constraint firstAttribute="trailing" secondItem="06H-u7-aW3" secondAttribute="trailing" id="tMP-YM-SsC"/>
+                    <constraint firstItem="z3T-9Y-VyM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tcg-3J-lBf"/>
+                    <constraint firstAttribute="trailing" secondItem="z21-lI-fS3" secondAttribute="trailing" constant="15" id="xXO-ju-rrW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="sureBtn" destination="z21-lI-fS3" id="5X2-c2-nI5"/>
+                <outlet property="tipsLabel" destination="qUZ-BT-8y2" id="sZr-wu-tWV"/>
+                <outlet property="topView" destination="z3T-9Y-VyM" id="rIu-36-Cqw"/>
+            </connections>
+            <point key="canvasLocation" x="-225" y="-111.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="button" width="345" height="44"/>
+    </resources>
+</document>

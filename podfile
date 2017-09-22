@@ -1,0 +1,14 @@
+target "Daiba" do
+
+platform:ios,"8.0"
+
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'MJExtension'
+pod 'Masonry'
+
+
+
+end

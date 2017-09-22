@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="YMRelationCell" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="YMRelationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家人：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYB-v2-56x">
+                        <rect key="frame" x="15" y="15" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朋友：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-Q5-Wn9">
+                        <rect key="frame" x="15" y="42" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同事：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-J0-bWw">
+                        <rect key="frame" x="15" y="69" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8t-IS-9Nr">
+                        <rect key="frame" x="245" y="108.5" width="60" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="SNg-Lg-Cv7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="修改">
+                            <color key="titleColor" red="1" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="modifyBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GFb-ZC-Upa"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SzB-J0-bWw" firstAttribute="leading" secondItem="dYB-v2-56x" secondAttribute="leading" id="217-FS-YWG"/>
+                    <constraint firstItem="dYB-v2-56x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Dft-m8-TUT"/>
+                    <constraint firstAttribute="trailing" secondItem="h8t-IS-9Nr" secondAttribute="trailing" constant="15" id="PoB-JW-n9e"/>
+                    <constraint firstItem="dYB-v2-56x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="dnU-6Z-tR5"/>
+                    <constraint firstItem="SzB-J0-bWw" firstAttribute="top" secondItem="QSa-Q5-Wn9" secondAttribute="bottom" constant="10" id="hpM-KF-9qD"/>
+                    <constraint firstItem="QSa-Q5-Wn9" firstAttribute="leading" secondItem="dYB-v2-56x" secondAttribute="leading" id="k2w-oE-m2q"/>
+                    <constraint firstItem="QSa-Q5-Wn9" firstAttribute="top" secondItem="dYB-v2-56x" secondAttribute="bottom" constant="10" id="oon-hh-oWR"/>
+                    <constraint firstAttribute="bottom" secondItem="h8t-IS-9Nr" secondAttribute="bottom" constant="10" id="rrY-wA-raV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="familyLabel" destination="dYB-v2-56x" id="BEz-sp-aXm"/>
+                <outlet property="friendLabel" destination="QSa-Q5-Wn9" id="eYZ-Vj-n3G"/>
+                <outlet property="modifyBtn" destination="h8t-IS-9Nr" id="La5-Nh-YDU"/>
+                <outlet property="workmateLabel" destination="SzB-J0-bWw" id="v77-Se-gVt"/>
+            </connections>
+            <point key="canvasLocation" x="-147" y="-99"/>
+        </tableViewCell>
+    </objects>
+</document>

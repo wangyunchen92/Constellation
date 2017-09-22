@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Daiba
+
+  Created by YouMeng on 2017/9/12.
+  Copyright © 2017年 YouMeng. All rights reserved.
+*/
+
+
+"CFBundleDisplayName" = "贷吧";
+"NSMicrophoneUsageDescription" = "需要您的同意，才能访问您的麦克风";
+"NSCameraUsageDescription" = "需要您的同意，才能访问您的相机";
+"NSPhotoLibraryUsageDescription" = "需要您的同意，才能访问您的相册";

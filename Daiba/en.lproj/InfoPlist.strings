@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  Daiba
+
+  Created by YouMeng on 2017/9/12.
+  Copyright © 2017年 YouMeng. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "DaiBar";
+"NSMicrophoneUsageDescription" = "App needs your permission to access your microphone.";
+"NSCameraUsageDescription" = "App needs your permission to access your camera.";
+"NSPhotoLibraryUsageDescription" = "App needs your permission to access your album.";

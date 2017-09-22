@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YMLoanProtocalController">
+            <connections>
+                <outlet property="closeBtn" destination="nNe-cQ-vWZ" id="F54-Z0-nZh"/>
+                <outlet property="tableView" destination="2EL-IZ-LmS" id="iGE-eM-CVb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqL-Ti-lKE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《贷款相关协议》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-KD-LaI">
+                            <rect key="frame" x="15" y="12" width="114.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNe-cQ-vWZ" customClass="ExtendButton">
+                            <rect key="frame" x="340" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="nNe-cQ-vWZ" secondAttribute="height" id="nS8-W3-7UL"/>
+                            </constraints>
+                            <state key="normal" image="关闭"/>
+                            <connections>
+                                <action selector="closeBtnClick:" destination="-1" eventType="touchUpInside" id="6yy-mu-2SU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="xZP-KD-LaI" firstAttribute="leading" secondItem="qqL-Ti-lKE" secondAttribute="leading" constant="15" id="JTy-up-MC8"/>
+                        <constraint firstItem="xZP-KD-LaI" firstAttribute="centerY" secondItem="qqL-Ti-lKE" secondAttribute="centerY" id="Z4z-hJ-CVV"/>
+                        <constraint firstItem="nNe-cQ-vWZ" firstAttribute="centerY" secondItem="xZP-KD-LaI" secondAttribute="centerY" id="fUI-ON-uEU"/>
+                        <constraint firstAttribute="height" constant="40" id="hYj-tq-TiB"/>
+                        <constraint firstAttribute="bottom" secondItem="nNe-cQ-vWZ" secondAttribute="bottom" constant="10" id="oHz-A2-DDg"/>
+                        <constraint firstAttribute="trailing" secondItem="nNe-cQ-vWZ" secondAttribute="trailing" constant="15" id="t12-Qf-tmO"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2EL-IZ-LmS">
+                    <rect key="frame" x="0.0" y="41" width="375" height="626"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AxY-Sv-PcU"/>
+                        <outlet property="delegate" destination="-1" id="MaV-NP-Dtp"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qqL-Ti-lKE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EY9-xV-Yqo"/>
+                <constraint firstAttribute="trailing" secondItem="qqL-Ti-lKE" secondAttribute="trailing" id="S90-Vu-STf"/>
+                <constraint firstItem="2EL-IZ-LmS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U4Q-b0-KsA"/>
+                <constraint firstItem="qqL-Ti-lKE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VwO-vX-PLq"/>
+                <constraint firstAttribute="trailing" secondItem="2EL-IZ-LmS" secondAttribute="trailing" id="bEq-CZ-Q3t"/>
+                <constraint firstAttribute="bottom" secondItem="2EL-IZ-LmS" secondAttribute="bottom" id="hoy-m2-O83"/>
+                <constraint firstItem="2EL-IZ-LmS" firstAttribute="top" secondItem="qqL-Ti-lKE" secondAttribute="bottom" constant="1" id="sRB-oG-w03"/>
+            </constraints>
+            <point key="canvasLocation" x="-272" y="-312"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭" width="14" height="14"/>
+    </resources>
+</document>

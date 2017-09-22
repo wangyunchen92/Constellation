@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="YMPhoneIdentifyCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="YMPhoneIdentifyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机认证尚未认证通过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnU-I2-6Aw">
+                        <rect key="frame" x="15" y="13.5" width="143" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="5kh-1G-O66">
+                        <rect key="frame" x="297" y="15.5" width="8" height="14"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5kh-1G-O66" firstAttribute="centerY" secondItem="lnU-I2-6Aw" secondAttribute="centerY" id="9hL-GZ-cDk"/>
+                    <constraint firstItem="lnU-I2-6Aw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bFh-bM-bSX"/>
+                    <constraint firstAttribute="trailing" secondItem="5kh-1G-O66" secondAttribute="trailing" constant="15" id="dbm-QQ-J3M"/>
+                    <constraint firstItem="lnU-I2-6Aw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ybo-cb-axi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titlLabel" destination="lnU-I2-6Aw" id="z3D-kC-Ig8"/>
+            </connections>
+            <point key="canvasLocation" x="-145" y="-326"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="2" width="8" height="14"/>
+    </resources>
+</document>

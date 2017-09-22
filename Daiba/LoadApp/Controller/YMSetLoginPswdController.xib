@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YMSetLoginPswdController">
+            <connections>
+                <outlet property="doneBtn" destination="DSr-YT-5Zi" id="Nz9-Xj-MNP"/>
+                <outlet property="firstPasswordTextFd" destination="0V4-hP-WSi" id="AXW-B9-SB9"/>
+                <outlet property="secondPasswordTextFd" destination="Xd7-WI-H4M" id="9Hl-V8-ibV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSB-dw-5us" userLabel="conView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入新密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xd7-WI-H4M">
+                            <rect key="frame" x="20.5" y="44" width="324.5" height="34"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入6~14位登录密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0V4-hP-WSi">
+                            <rect key="frame" x="20" y="2" width="324.5" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Xd7-WI-H4M" firstAttribute="top" secondItem="0V4-hP-WSi" secondAttribute="bottom" constant="2" id="2ry-cv-aoq"/>
+                        <constraint firstItem="0V4-hP-WSi" firstAttribute="top" secondItem="GSB-dw-5us" secondAttribute="top" constant="2" id="5Wu-Jg-YxG"/>
+                        <constraint firstItem="0V4-hP-WSi" firstAttribute="leading" secondItem="GSB-dw-5us" secondAttribute="leading" constant="20" id="620-55-Sam"/>
+                        <constraint firstItem="0V4-hP-WSi" firstAttribute="leading" secondItem="Xd7-WI-H4M" secondAttribute="leading" id="9jf-QX-F1K"/>
+                        <constraint firstAttribute="bottom" secondItem="Xd7-WI-H4M" secondAttribute="bottom" constant="2" id="kCn-nF-3NT"/>
+                        <constraint firstAttribute="height" constant="80" id="lTM-y1-5dg"/>
+                        <constraint firstItem="0V4-hP-WSi" firstAttribute="trailing" secondItem="Xd7-WI-H4M" secondAttribute="trailing" id="mdF-yP-Lr7"/>
+                        <constraint firstAttribute="trailing" secondItem="Xd7-WI-H4M" secondAttribute="trailing" constant="30" id="zLa-eN-wXS"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LID-CD-3VV">
+                    <rect key="frame" x="15" y="59" width="360" height="1"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rYE-7d-alK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-YT-5Zi">
+                    <rect key="frame" x="10" y="140" width="355" height="44"/>
+                    <color key="backgroundColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="i8H-m9-ydF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="确认" backgroundImage="button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sureBtnClick:" destination="-1" eventType="touchUpInside" id="7vB-ez-Tvv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="0V4-hP-WSi" firstAttribute="bottom" secondItem="LID-CD-3VV" secondAttribute="bottom" constant="2" id="G7V-EN-0Ig"/>
+                <constraint firstItem="GSB-dw-5us" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GcK-ia-krM"/>
+                <constraint firstAttribute="trailing" secondItem="GSB-dw-5us" secondAttribute="trailing" id="JOw-aG-Cqm"/>
+                <constraint firstItem="DSr-YT-5Zi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="OSP-xz-IMJ"/>
+                <constraint firstItem="GSB-dw-5us" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="QO1-l3-WA2"/>
+                <constraint firstItem="LID-CD-3VV" firstAttribute="top" secondItem="GSB-dw-5us" secondAttribute="top" constant="39" id="XcA-VE-9c1"/>
+                <constraint firstItem="LID-CD-3VV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cpI-HC-nSU"/>
+                <constraint firstItem="DSr-YT-5Zi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sGw-M3-k4I"/>
+                <constraint firstAttribute="trailing" secondItem="LID-CD-3VV" secondAttribute="trailing" id="uBA-1X-e2n"/>
+                <constraint firstItem="DSr-YT-5Zi" firstAttribute="top" secondItem="GSB-dw-5us" secondAttribute="bottom" constant="40" id="xNq-WM-XGJ"/>
+            </constraints>
+            <point key="canvasLocation" x="-636" y="-272"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button" width="345" height="44"/>
+    </resources>
+</document>
