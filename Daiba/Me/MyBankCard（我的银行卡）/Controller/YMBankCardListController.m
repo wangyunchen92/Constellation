@@ -31,7 +31,7 @@
     self.tableView.tableFooterView = [UIView new];
 
     [self requestAccountInfo];
-    
+    DDLog(@"tes");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,9 +43,6 @@
     if (!_dataArr) {
         _dataArr = [[NSMutableArray alloc]init];
     }
-    
-    
-    
     return _dataArr;
 }
 
