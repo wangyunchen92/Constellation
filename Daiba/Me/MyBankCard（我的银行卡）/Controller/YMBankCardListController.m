@@ -32,6 +32,7 @@
 
     [self requestAccountInfo];
     DDLog(@"tes");
+    DDLog(@"tetst");
 }
 
 - (void)didReceiveMemoryWarning {
