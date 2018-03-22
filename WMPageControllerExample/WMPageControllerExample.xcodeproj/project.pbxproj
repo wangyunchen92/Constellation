@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32A979A11FC6B8E500C392A0 /* UIViewController+WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A979A01FC6B8E500C392A0 /* UIViewController+WMPageController.m */; };
 		4D4EC7151EFA6A7700DDFF36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7141EFA6A7700DDFF36 /* main.m */; };
 		4D4EC7181EFA6A7700DDFF36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7171EFA6A7700DDFF36 /* AppDelegate.m */; };
 		4D4EC71E1EFA6A7700DDFF36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EC71C1EFA6A7700DDFF36 /* Main.storyboard */; };
@@ -30,12 +29,13 @@
 		4D4EC7691EFA6BDE00DDFF36 /* three.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EC7611EFA6BDE00DDFF36 /* three.jpg */; };
 		4D4EC76A1EFA6BDE00DDFF36 /* zoro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EC7621EFA6BDE00DDFF36 /* zoro.jpg */; };
 		4D4EC76D1EFA6BFD00DDFF36 /* WMMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC76C1EFA6BFD00DDFF36 /* WMMainTableViewController.m */; };
-		4D4EC77A1EFA6D5000DDFF36 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7711EFA6D5000DDFF36 /* WMMenuItem.m */; };
-		4D4EC77B1EFA6D5000DDFF36 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7731EFA6D5000DDFF36 /* WMMenuView.m */; };
-		4D4EC77C1EFA6D5000DDFF36 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7751EFA6D5000DDFF36 /* WMProgressView.m */; };
-		4D4EC77D1EFA6D5000DDFF36 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7771EFA6D5000DDFF36 /* WMScrollView.m */; };
-		4D4EC77E1EFA6D5000DDFF36 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7791EFA6D5000DDFF36 /* WMPageController.m */; };
 		4D4EC7811EFA6E3D00DDFF36 /* WMCustomizedPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EC7801EFA6E3D00DDFF36 /* WMCustomizedPageController.m */; };
+		D57FACF620636137009CBFD7 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACE920636137009CBFD7 /* WMPageController.m */; };
+		D57FACF720636137009CBFD7 /* UIViewController+WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACEA20636137009CBFD7 /* UIViewController+WMPageController.m */; };
+		D57FACF820636137009CBFD7 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACF020636137009CBFD7 /* WMMenuItem.m */; };
+		D57FACF920636137009CBFD7 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACF120636137009CBFD7 /* WMScrollView.m */; };
+		D57FACFA20636137009CBFD7 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACF220636137009CBFD7 /* WMMenuView.m */; };
+		D57FACFB20636137009CBFD7 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57FACF320636137009CBFD7 /* WMProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32A9799F1FC6B8E500C392A0 /* UIViewController+WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMPageController.h"; sourceTree = "<group>"; };
-		32A979A01FC6B8E500C392A0 /* UIViewController+WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMPageController.m"; sourceTree = "<group>"; };
 		4D4EC7101EFA6A7700DDFF36 /* WMPageControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMPageControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4EC7141EFA6A7700DDFF36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D4EC7161EFA6A7700DDFF36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,18 +92,20 @@
 		4D4EC7621EFA6BDE00DDFF36 /* zoro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zoro.jpg; sourceTree = "<group>"; };
 		4D4EC76B1EFA6BFD00DDFF36 /* WMMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMainTableViewController.h; sourceTree = "<group>"; };
 		4D4EC76C1EFA6BFD00DDFF36 /* WMMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMainTableViewController.m; sourceTree = "<group>"; };
-		4D4EC7701EFA6D5000DDFF36 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
-		4D4EC7711EFA6D5000DDFF36 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
-		4D4EC7721EFA6D5000DDFF36 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
-		4D4EC7731EFA6D5000DDFF36 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
-		4D4EC7741EFA6D5000DDFF36 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
-		4D4EC7751EFA6D5000DDFF36 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
-		4D4EC7761EFA6D5000DDFF36 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
-		4D4EC7771EFA6D5000DDFF36 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
-		4D4EC7781EFA6D5000DDFF36 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
-		4D4EC7791EFA6D5000DDFF36 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		4D4EC77F1EFA6E3D00DDFF36 /* WMCustomizedPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCustomizedPageController.h; sourceTree = "<group>"; };
 		4D4EC7801EFA6E3D00DDFF36 /* WMCustomizedPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCustomizedPageController.m; sourceTree = "<group>"; };
+		D57FACE920636137009CBFD7 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		D57FACEA20636137009CBFD7 /* UIViewController+WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMPageController.m"; sourceTree = "<group>"; };
+		D57FACEC20636137009CBFD7 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		D57FACED20636137009CBFD7 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		D57FACEE20636137009CBFD7 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		D57FACEF20636137009CBFD7 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		D57FACF020636137009CBFD7 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		D57FACF120636137009CBFD7 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		D57FACF220636137009CBFD7 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		D57FACF320636137009CBFD7 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		D57FACF420636137009CBFD7 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		D57FACF520636137009CBFD7 /* UIViewController+WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMPageController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		4D4EC7121EFA6A7700DDFF36 /* WMPageControllerExample */ = {
 			isa = PBXGroup;
 			children = (
-				4D4EC76E1EFA6D5000DDFF36 /* WMPageController */,
+				D57FACE820636137009CBFD7 /* WMPageController */,
 				4D4EC75A1EFA6BDE00DDFF36 /* Images */,
 				4D4EC7531EFA6BA500DDFF36 /* Views */,
 				4D4EC7461EFA6B9000DDFF36 /* Controller */,
@@ -242,30 +242,29 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		4D4EC76E1EFA6D5000DDFF36 /* WMPageController */ = {
+		D57FACE820636137009CBFD7 /* WMPageController */ = {
 			isa = PBXGroup;
 			children = (
-				4D4EC76F1EFA6D5000DDFF36 /* WMMenuView */,
-				32A9799F1FC6B8E500C392A0 /* UIViewController+WMPageController.h */,
-				32A979A01FC6B8E500C392A0 /* UIViewController+WMPageController.m */,
-				4D4EC7781EFA6D5000DDFF36 /* WMPageController.h */,
-				4D4EC7791EFA6D5000DDFF36 /* WMPageController.m */,
+				D57FACE920636137009CBFD7 /* WMPageController.m */,
+				D57FACEA20636137009CBFD7 /* UIViewController+WMPageController.m */,
+				D57FACEB20636137009CBFD7 /* WMMenuView */,
+				D57FACF420636137009CBFD7 /* WMPageController.h */,
+				D57FACF520636137009CBFD7 /* UIViewController+WMPageController.h */,
 			);
-			name = WMPageController;
-			path = ../../../WMPageController;
+			path = WMPageController;
 			sourceTree = "<group>";
 		};
-		4D4EC76F1EFA6D5000DDFF36 /* WMMenuView */ = {
+		D57FACEB20636137009CBFD7 /* WMMenuView */ = {
 			isa = PBXGroup;
 			children = (
-				4D4EC7701EFA6D5000DDFF36 /* WMMenuItem.h */,
-				4D4EC7711EFA6D5000DDFF36 /* WMMenuItem.m */,
-				4D4EC7721EFA6D5000DDFF36 /* WMMenuView.h */,
-				4D4EC7731EFA6D5000DDFF36 /* WMMenuView.m */,
-				4D4EC7741EFA6D5000DDFF36 /* WMProgressView.h */,
-				4D4EC7751EFA6D5000DDFF36 /* WMProgressView.m */,
-				4D4EC7761EFA6D5000DDFF36 /* WMScrollView.h */,
-				4D4EC7771EFA6D5000DDFF36 /* WMScrollView.m */,
+				D57FACEC20636137009CBFD7 /* WMScrollView.h */,
+				D57FACED20636137009CBFD7 /* WMMenuItem.h */,
+				D57FACEE20636137009CBFD7 /* WMMenuView.h */,
+				D57FACEF20636137009CBFD7 /* WMProgressView.h */,
+				D57FACF020636137009CBFD7 /* WMMenuItem.m */,
+				D57FACF120636137009CBFD7 /* WMScrollView.m */,
+				D57FACF220636137009CBFD7 /* WMMenuView.m */,
+				D57FACF320636137009CBFD7 /* WMProgressView.m */,
 			);
 			path = WMMenuView;
 			sourceTree = "<group>";
@@ -412,22 +411,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57FACF620636137009CBFD7 /* WMPageController.m in Sources */,
+				D57FACFA20636137009CBFD7 /* WMMenuView.m in Sources */,
+				D57FACF820636137009CBFD7 /* WMMenuItem.m in Sources */,
 				4D4EC7811EFA6E3D00DDFF36 /* WMCustomizedPageController.m in Sources */,
 				4D4EC7501EFA6B9000DDFF36 /* WMSecondViewController.m in Sources */,
-				4D4EC77A1EFA6D5000DDFF36 /* WMMenuItem.m in Sources */,
-				32A979A11FC6B8E500C392A0 /* UIViewController+WMPageController.m in Sources */,
-				4D4EC77E1EFA6D5000DDFF36 /* WMPageController.m in Sources */,
 				4D4EC7181EFA6A7700DDFF36 /* AppDelegate.m in Sources */,
-				4D4EC77C1EFA6D5000DDFF36 /* WMProgressView.m in Sources */,
 				4D4EC74F1EFA6B9000DDFF36 /* WMCollectionViewController.m in Sources */,
 				4D4EC7151EFA6A7700DDFF36 /* main.m in Sources */,
+				D57FACF920636137009CBFD7 /* WMScrollView.m in Sources */,
 				4D4EC7591EFA6BA500DDFF36 /* WMLoopView.m in Sources */,
-				4D4EC77B1EFA6D5000DDFF36 /* WMMenuView.m in Sources */,
-				4D4EC77D1EFA6D5000DDFF36 /* WMScrollView.m in Sources */,
 				4D4EC7521EFA6B9000DDFF36 /* WMViewController.m in Sources */,
 				4D4EC7581EFA6BA500DDFF36 /* WMImageViewCell.m in Sources */,
 				4D4EC7511EFA6B9000DDFF36 /* WMTableViewController.m in Sources */,
 				4D4EC76D1EFA6BFD00DDFF36 /* WMMainTableViewController.m in Sources */,
+				D57FACF720636137009CBFD7 /* UIViewController+WMPageController.m in Sources */,
+				D57FACFB20636137009CBFD7 /* WMProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
