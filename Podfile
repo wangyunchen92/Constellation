@@ -14,6 +14,7 @@ pod 'YYText'
 pod 'CocoaLumberjack'
 pod 'Masonry', '~> 1.0'
 pod 'WYCPagController'
+pod 'FMDB', '~> 2.6.2'
 
   # Pods for Constellation
 

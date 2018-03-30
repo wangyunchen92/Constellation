@@ -96,6 +96,8 @@ static NSString *const userIdIdentifier = @"userId";// 用户id
 static NSString *const userNameIdentifier = @"userName"; // 用户名
 static NSString *const phoneNumberIdentifier = @"phoneNumber"; //手机号码
 
+static NSString *const constellationNumber = @"constellationNumber";
+
 
 #define requestErrorStrings(error)  \
 NSString *errorString = @"";\

@@ -201,7 +201,8 @@
 + (BOOL)JudgeTheIllegalCharacter:(NSString *)content;
 //emoji表情输入判断
 + (BOOL)stringContainsEmoji:(NSString *)string;
-
+// 根据数字判断星座
++ (NSString *)imagetrans:(NSInteger )tag;
 
 
 #pragma mark - webView清理缓存

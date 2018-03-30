@@ -83,6 +83,7 @@
     
     HomeViewController *hvc      = [[HomeViewController alloc] init];
     MainNewHealineViewController *mvc = [[MainNewHealineViewController alloc] init];
+
     
     DSNavViewController *hNav    = [[DSNavViewController alloc] initWithRootViewController:hvc];
     DSNavViewController *mNav    = [[DSNavViewController alloc] initWithRootViewController:mvc];
@@ -130,19 +131,8 @@
     navController.tabBarItem.selectedImage = normalSelectImage;
 }
 
-
-
-
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
-
-    //                self.window.rootViewController = loginVC;
-    // 弹出界面必须含有容器,否则不能点击进入下一级界面
-    [[BackgroundViewController share] showLoginViewController:loginVC animated:NO completion:^{
-        
-    }];
     
 }
 

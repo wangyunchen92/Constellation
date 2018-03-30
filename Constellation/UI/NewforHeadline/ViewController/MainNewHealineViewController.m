@@ -20,20 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.boardView = [[NewHeadlineViewController alloc] init];
-
     self.boardView.menuViewStyle = WMMenuViewStyleLine;
+    self.boardView.isShadow = YES;
     self.boardView.titleColorSelected = [UIColor blueColor];
     self.boardView.automaticallyCalculatesItemWidths = YES;
-    self.boardView.preloadPolicy = WMPageControllerPreloadPolicyNeighbour;
+    self.boardView.preloadPolicy = WMPageControllerPreloadPolicyHeight;
     self.boardView.cachePolicy = WMPageControllerCachePolicyHigh;
+    
     [self.view addSubview:self.boardView.view];
-    [self addChildViewController:_boardView];
     [self.boardView.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view);
         make.top.equalTo(self.view).with.offset(64);
         make.right.equalTo(self.view);
         make.bottom.equalTo(self.view);
     }];
+    [self addChildViewController:_boardView];
+
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NewTableViewController : UITableViewController
+
+@property (nonatomic, assign)BOOL canScroll;
 - (instancetype)initWithType:(NSString *)type;
 
 @end

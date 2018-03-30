@@ -89,6 +89,23 @@
     return nil;
 
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 1;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (!self.canScroll) {
+        scrollView.contentOffset = CGPointZero;
+    }
+    if (scrollView.contentOffset.y <= 0) {
+        self.canScroll = NO;
+        scrollView.contentOffset = CGPointZero;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"leaveTop" object:nil];//到顶通知父视图改变状态
+    }
+    
+    self.tableView.showsVerticalScrollIndicator = self.canScroll?YES:NO;
+}
 
 
 /*

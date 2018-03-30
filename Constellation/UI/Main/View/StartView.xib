@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartView">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="QhN-hN-EYm"/>
+                <outletCollection property="startImageView" destination="63o-2J-ceF" id="mEQ-8x-cLx"/>
+                <outletCollection property="startImageView" destination="Zff-Gz-dWq" id="bGl-nY-EQ8"/>
+                <outletCollection property="startImageView" destination="av9-qE-42H" id="oT0-fW-IfV"/>
+                <outletCollection property="startImageView" destination="M62-yK-tGx" id="PwK-1y-i16"/>
+                <outletCollection property="startImageView" destination="5PY-z7-9DN" id="OIW-qt-0to"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="89" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星级-灰" translatesAutoresizingMaskIntoConstraints="NO" id="63o-2J-ceF">
+                    <rect key="frame" x="5" y="14" width="15" height="15"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星级-灰" translatesAutoresizingMaskIntoConstraints="NO" id="Zff-Gz-dWq">
+                    <rect key="frame" x="23" y="14" width="15" height="15"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星级-灰" translatesAutoresizingMaskIntoConstraints="NO" id="av9-qE-42H">
+                    <rect key="frame" x="41" y="14" width="15" height="15"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星级-灰" translatesAutoresizingMaskIntoConstraints="NO" id="M62-yK-tGx">
+                    <rect key="frame" x="59" y="14" width="15" height="15"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星级-灰" translatesAutoresizingMaskIntoConstraints="NO" id="5PY-z7-9DN">
+                    <rect key="frame" x="77" y="14" width="15" height="15"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="63o-2J-ceF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="62Y-1Q-Zr4"/>
+                <constraint firstItem="M62-yK-tGx" firstAttribute="leading" secondItem="av9-qE-42H" secondAttribute="trailing" constant="3" id="8Vq-Aj-Aw3"/>
+                <constraint firstItem="Zff-Gz-dWq" firstAttribute="centerY" secondItem="63o-2J-ceF" secondAttribute="centerY" id="CTF-Pw-cHr"/>
+                <constraint firstItem="5PY-z7-9DN" firstAttribute="centerY" secondItem="63o-2J-ceF" secondAttribute="centerY" id="I5I-vq-vCB"/>
+                <constraint firstItem="av9-qE-42H" firstAttribute="centerY" secondItem="63o-2J-ceF" secondAttribute="centerY" id="J81-Uk-GaN"/>
+                <constraint firstItem="M62-yK-tGx" firstAttribute="centerY" secondItem="63o-2J-ceF" secondAttribute="centerY" id="M3F-cn-OkY"/>
+                <constraint firstItem="Zff-Gz-dWq" firstAttribute="leading" secondItem="63o-2J-ceF" secondAttribute="trailing" constant="3" id="R3I-FL-wxS"/>
+                <constraint firstItem="63o-2J-ceF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mqx-t9-fne"/>
+                <constraint firstItem="av9-qE-42H" firstAttribute="leading" secondItem="Zff-Gz-dWq" secondAttribute="trailing" constant="3" id="pi7-B9-lWu"/>
+                <constraint firstItem="5PY-z7-9DN" firstAttribute="leading" secondItem="M62-yK-tGx" secondAttribute="trailing" constant="3" id="soz-9n-AN1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-25.5" y="-55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="星级-灰" width="15" height="15"/>
+    </resources>
+</document>

@@ -14,6 +14,7 @@
                 <outlet property="NameMaskView" destination="wwO-9k-Uv4" id="hYg-R4-bAs"/>
                 <outlet property="dateLabel" destination="vNc-OV-Oak" id="n5f-3T-D1n"/>
                 <outlet property="desLabel" destination="wbI-mI-kFT" id="EjI-wc-dCu"/>
+                <outlet property="imageView" destination="a6C-X9-Kex" id="V5C-lo-DVF"/>
                 <outlet property="nameLabel" destination="ZkT-24-gb6" id="ihe-5w-HPS"/>
                 <outlet property="scrollerView" destination="b19-Do-grb" id="khe-b2-Bpp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b19-Do-grb">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b19-Do-grb" customClass="BaseScroller">
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7T-Xy-Cag">
@@ -42,9 +43,13 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="白羊座是黄道十二宫的第一个星座，这让你有着孩童般的纯真、坦孩童般的纯真率...【详情】" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbI-mI-kFT">
                                     <rect key="frame" x="116" y="56" width="230" height="54"/>
+                                    <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="fnF-jT-a7Q" appends="YES" id="gwt-lM-xSg"/>
+                                    </connections>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-9k-Uv4">
                                     <rect key="frame" x="116" y="16" width="92" height="28"/>
@@ -60,6 +65,7 @@
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.56005692481994629" green="0.39287674427032471" blue="0.81180351972579956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="92" id="2nX-ZR-aBd"/>
                                         <constraint firstItem="EuQ-c6-9wG" firstAttribute="leading" secondItem="ZkT-24-gb6" secondAttribute="trailing" constant="8" id="M5i-OU-kfE"/>
@@ -72,6 +78,9 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="14"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="NbY-ko-aQR" appends="YES" id="f61-C6-7aa"/>
+                                    </connections>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.21-4.19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNc-OV-Oak">
                                     <rect key="frame" x="223" y="21" width="64" height="18"/>
@@ -99,9 +108,9 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="z7T-Xy-Cag" secondAttribute="trailing" id="Nk0-i4-O5z"/>
-                        <constraint firstAttribute="bottom" secondItem="z7T-Xy-Cag" secondAttribute="bottom" constant="439" id="f2U-es-Zd0"/>
                         <constraint firstItem="z7T-Xy-Cag" firstAttribute="leading" secondItem="b19-Do-grb" secondAttribute="leading" id="p2s-EO-OCZ"/>
                         <constraint firstItem="z7T-Xy-Cag" firstAttribute="top" secondItem="b19-Do-grb" secondAttribute="top" id="pyz-zt-F5G"/>
                     </constraints>
@@ -120,6 +129,16 @@
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
+        <tapGestureRecognizer id="NbY-ko-aQR">
+            <connections>
+                <action selector="choseConstellationAction:" destination="-1" id="l5d-sY-1Fa"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="fnF-jT-a7Q" userLabel="labelGesture">
+            <connections>
+                <action selector="pushDetail:" destination="-1" id="JaG-Yp-X7G"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="白羊座" width="80" height="80"/>

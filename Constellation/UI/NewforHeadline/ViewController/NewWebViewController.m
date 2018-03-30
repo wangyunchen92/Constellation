@@ -31,7 +31,10 @@
     [RACObserve(self, urlString) subscribeNext:^(id x) {
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: [NSURL URLWithString:self.urlString]];
         request.timeoutInterval = 10;
-        [self.webView loadRequest:request];
+        dispatch_main_async(^(){
+            [self.webView loadRequest:request];
+        })
+        
     }];
 }
 

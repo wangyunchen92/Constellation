@@ -25,7 +25,7 @@
 }
 #pragma mark 界面初始化
 - (void)initWindowWithOptions:(NSDictionary *)launchOptions {
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

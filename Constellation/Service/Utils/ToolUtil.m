@@ -1386,4 +1386,49 @@
     return attributeStr;
 }
 
++ (NSString *)imagetrans:(NSInteger )tag {
+    NSString *str;
+    switch (tag) {
+        case 1:
+            str = @"水瓶座";
+            break;
+        case 2:
+            str = @"双鱼座";
+            break;
+        case 3:
+            str = @"白羊座";
+            break;
+        case 4:
+            str = @"金牛座";
+            break;
+        case 5:
+            str = @"双子座";
+            break;
+        case 6:
+            str = @"巨蟹座";
+            break;
+        case 7:
+            str = @"狮子座";
+            break;
+        case 8:
+            str = @"处女座";
+            break;
+        case 9:
+            str = @"天秤座";
+            break;
+        case 10:
+            str = @"天蝎座";
+            break;
+        case 11:
+            str = @"射手座";
+            break;
+        case 12:
+            str = @"摩羯座";
+            break;
+        default:
+            break;
+    }
+    return str;
+}
+
 @end

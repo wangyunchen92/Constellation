@@ -1,84 +1,84 @@
 //
-//  NewHeadlineViewController.m
+//  HomeBoardViewController.m
 //  Constellation
 //
-//  Created by Sj03 on 2018/3/23.
+//  Created by Sj03 on 2018/3/29.
 //  Copyright © 2018年 Sj03. All rights reserved.
 //
 
-#import "NewHeadlineViewController.h"
-#import "NewTableViewController.h"
-#import "NewHealineTitleViewModel.h"
+#import "HomeBoardViewController.h"
+#import "HomeBoardIteamViewController.h"
 
-@interface NewHeadlineViewController ()
-@property (nonatomic, strong) UIView *redView;
-@property (nonatomic, strong) NSMutableArray *titleArray;
-@property (nonatomic, strong)NewHealineTitleViewModel *viewModel;
-@property (nonatomic, strong)NSString *stringPag;
+@interface HomeBoardViewController ()
+@property (nonatomic, strong)NSMutableArray *titleArray;
+@property (nonatomic, assign)NSInteger type;
 
 @end
 
-@implementation NewHeadlineViewController
+@implementation HomeBoardViewController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.titleArray = [[NSMutableArray alloc] initWithObjects:@"今日",@"明日",@"本周",@"本月",@"年运", nil];
+    }
+    self.type = 1;
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.stringPag = @"1";
-    self.viewModel = [[NewHealineTitleViewModel alloc] init];
-    [self.viewModel.subject_getDate sendNext:self.stringPag];
-    @weakify(self);
-    self.viewModel.block_reloadDate = ^{
-        @strongify(self);
-        [self reloadData];
-    };
 
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-
+    // Do any additional setup after loading the view.
 }
 
 // 顶部有几个Icon
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
-    return self.viewModel.dataArray.count ? self.viewModel.dataArray.count : 0;
+    return 5;
 }
 
 // 顶部Icon的Title
 - (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
-
-    return self.viewModel.dataArray.count ? self.viewModel.dataArray[index] : @"头条";
+    return  self.titleArray[index];
 }
 
 // 每个Icon 对应产生的View
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
-    NewTableViewController *VC = [[NewTableViewController alloc] initWithType:[self.viewModel.allKeyArray objectAtIndex: index]];
-    VC.canScroll = YES;
-//    UIViewController *VC = [[UIViewController alloc] init];
+    HomeBoardIteamViewController *VC = [[HomeBoardIteamViewController alloc] init];
+    if (index == 2) {
+        VC.type = 1;
+    } else if (index == 3) {
+        VC.type = 2;
+    } else if (index == 4) {
+        VC.type = 3;
+    }
     return VC;
-
 }
 
+- (void)pageController:(WMPageController *)pageController showViewController:(__kindof HomeBoardIteamViewController *)viewController withInfo:(NSDictionary *)info {
+    [self.view mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(viewController.reloadHeight+ 44);
+        self.reloadHeight = viewController.reloadHeight+ 44;
+    }];
+}
 
 - (CGFloat)menuView:(WMMenuView *)menu widthForItemAtIndex:(NSInteger)index {
-    CGFloat width = [super menuView:menu widthForItemAtIndex:index];
-    return width + 40;
+//    CGFloat width = [super menuView:menu widthForItemAtIndex:index];
+    CGFloat width = kScreenWidth/5;
+    return width;
 }
-
 
 - (CGRect)pageController:(WMPageController *)pageController preferredFrameForMenuView:(WMMenuView *)menuView {
     CGFloat leftMargin = self.showOnNavigationBar ? 50 : 0;
-//    CGFloat originY = self.showOnNavigationBar ? 0 : CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    //    CGFloat originY = self.showOnNavigationBar ? 0 : CGRectGetMaxY(self.navigationController.navigationBar.frame);
     return CGRectMake(leftMargin, 0, self.view.frame.size.width - 2*leftMargin, 44);
 }
 
 - (CGRect)pageController:(WMPageController *)pageController preferredFrameForContentView:(WMScrollView *)contentView {
     CGFloat originY = CGRectGetMaxY([self pageController:pageController preferredFrameForMenuView:self.menuView]);
-    if (self.menuViewStyle == WMMenuViewStyleTriangle) {
-        originY += self.redView.frame.size.height;
-    }
     return CGRectMake(0, originY, self.view.frame.size.width, self.view.frame.size.height - originY);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -95,7 +95,7 @@
     [super viewWillDisappear:animated];
 }
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Private's methods
@@ -109,6 +109,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBar.translucent = YES;
+    
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:self.navigationController.navigationBar.titleTextAttributes];
     [dic setObject:kFontHWSmall forKey:NSFontAttributeName];
