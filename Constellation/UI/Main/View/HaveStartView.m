@@ -8,6 +8,7 @@
 
 #import "HaveStartView.h"
 #import "StartView.h"
+#import "ConstellationModel.h"
 @interface HaveStartView ()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *boardFirstLabel;
@@ -30,6 +31,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *topNameFourLabel;
 @property (weak, nonatomic) IBOutlet UILabel *topNameTwoLabel;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *topArrayLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *hiddenFirstImage;
+@property (weak, nonatomic) IBOutlet UILabel *hiddenFirstLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *hiddenLabelTopConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *topNameFirstLabel;
 
 @property (nonatomic, assign)CGFloat changeHeight;
 @end
@@ -42,15 +47,36 @@
     [self addSubview:self.view];
     self.view.frame = CGRectMake(0, 0, kScreenWidth, self.height);
 }
-- (void)getDateForeModel:(NSDictionary *)dic {
-    self.boardFirstLabel.text = @"会收到爱的神秘礼物。";
-    self.boardSecendLabel.text = @"喜欢的他虽然不喜欢你，却又能从别人那儿得到更多的关爱，感情面内心颇感平衡。支出趋于平缓，没有机会挥霍钱财，让你留住不少钱财。工作热情不足，斩获相对减少，应加强积极性，太过闲散易落后。";
-    self.boardThreeLabel.text = @"异性缘佳，单身者有看对眼的对象别被动等待；恋爱中的人应多交流，稳固感情。";
-    self.boardFourLabel.text = @"事业运很不好，像泄气皮球般，不太堆得动。想要混水摸鱼时要小心点，可别露出马脚啰！";
-    self.boardFiveLabel.text = @"对金钱的支配欲及占有欲相当强。";
+
+- (void)getDateForeModel:(ConstellationModel *)model {
+    
+    self.boardSecendLabel.text = model.consteYunShi;
+    self.boardThreeLabel.text = model.consteAiQing;
+    self.boardFourLabel.text = model.consteGongZuo;
+    
+    self.boardFiveLabel.text = model.consteCaiFu;
+    if ([model isKindOfClass:[ConstellaDayModel class]]) {
+        [self getModelForToDay:model];
+    }
+    if ([model isKindOfClass:[ConstellaWeakModel class]]) {
+        [self getModelForWeak:model];
+    }
+    if ([model isKindOfClass:[ConstellaMonthModel class]]) {
+        
+        [self getModelForMonth:model];
+    }
+    if ([model isKindOfClass:[ConstellaYearModel class]]) {
+        [self getModelForYear:model];
+    }
+   
 
     if (self.type == 1) {
         self.topNameFourLabel.text = @"幸运日";
+        self.hiddenFirstImage.hidden = YES;
+        self.hiddenFirstLabel.hidden = YES;
+        self.hiddenLabelTopConstraint.constant = -37;
+        self.changeHeight  = -37;
+        
         
     }
     if (self.type == 2) {
@@ -59,8 +85,13 @@
         self.topFourLabel.hidden = YES;
         self.topNameFourLabel.hidden = YES;
         self.topNameTwoLabel.text = @"缘分星座";
-        self.viewTopConstraint.constant = -24;
-        self.changeHeight = -24;
+        self.viewTopConstraint.constant = -10;
+        
+        self.hiddenFirstImage.hidden = YES;
+        self.hiddenFirstLabel.hidden = YES;
+        self.hiddenLabelTopConstraint.constant = -37;
+        self.changeHeight = -10 - 37;
+        
     }
     
     if (self.type == 3) {
@@ -73,11 +104,16 @@
         self.secendStartView.hidden = YES;
         self.threeStartView.hidden = YES;
         self.fourStartView.hidden = YES;
-        self.topFirstLabel.text = @"综合指数";
-        self.topSecendLabel.text = @"爱情指数";
-        self.topthreeLabel.text = @"财富指数";
-        self.topFourLabel.text = @"工作指数";
-        self.changeHeight = -48;
+        self.topNameFirstLabel.text = @"综合指数";
+        self.topNameTwoLabel.text = @"爱情指数";
+        self.topNameThreeLabel.text = @"财富指数";
+        self.topNameFourLabel.text = @"工作指数";
+        self.changeHeight = -48 -37;
+        
+        self.hiddenFirstImage.hidden = YES;
+        self.hiddenFirstLabel.hidden = YES;
+        self.boardFirstLabel.hidden  = YES;
+        self.hiddenLabelTopConstraint.constant = -37;
     }
     
     self.reloadHeight = 184 + 51 * 5 + [self getLabelHeight] + self.changeHeight;
@@ -94,6 +130,50 @@
     
     return height;
 }
+
+
+- (void)getModelForToDay:(ConstellaDayModel *)model {
+    self.boardFirstLabel.text = model.consteDaynotice;
+    [self.firstStartView getStartNumber:[model.summaryStar integerValue]];
+    [self.secendStartView getStartNumber:[model.loveStar integerValue]];
+    [self.threeStartView getStartNumber:[model.moneyStar integerValue]];
+    [self.fourStartView getStartNumber:[model.workStar integerValue]];
+    self.topFirstLabel.text = model.consteGrxz;
+    self.topSecendLabel.text = model.consteLuckNum;
+    self.topthreeLabel.text = model.consteLuckCol;
+    self.topFourLabel.text = model.consteluckyTime;
+    
+}
+
+- (void)getModelForWeak:(ConstellaWeakModel *)model {
+    self.boardFirstLabel.text = model.consteDaynotice;
+    [self.firstStartView getStartNumber:[model.summaryStar integerValue]];
+    [self.secendStartView getStartNumber:[model.loveStar integerValue]];
+    [self.threeStartView getStartNumber:[model.moneyStar integerValue]];
+    [self.fourStartView getStartNumber:[model.workStar integerValue]];
+    self.topFirstLabel.text = model.consteGrxz;
+    self.topSecendLabel.text = model.consteLuckNum;
+    self.topthreeLabel.text = model.consteLuckCol;
+    self.topFourLabel.text = model.consteLuckDay;
+}
+
+- (void)getModelForMonth:(ConstellaMonthModel *)model {
+    self.boardFirstLabel.text = model.consteDaynotice;
+    [self.firstStartView getStartNumber:[model.summaryStar integerValue]];
+    [self.secendStartView getStartNumber:[model.loveStar integerValue]];
+    [self.threeStartView getStartNumber:[model.moneyStar integerValue]];
+    [self.fourStartView getStartNumber:[model.workStar integerValue]];
+    self.topFirstLabel.text = model.consteGrxz;
+    self.topSecendLabel.text = model.consteYfxz;
+}
+
+- (void)getModelForYear:(ConstellaYearModel *)model {
+    self.topFirstLabel.text = model.consteGeneral;
+    self.topSecendLabel.text = model.consteLove;
+    self.topthreeLabel.text = model.consteMoney;
+    self.topFourLabel.text = model.consteWork;
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

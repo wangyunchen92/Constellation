@@ -39,6 +39,7 @@
     self.canScroll = YES;
     self.desLabel.userInteractionEnabled = YES;
     self.viewModel = [[HomeViewModel alloc] init];
+
     [self createNavWithTitle:@"星座大全" leftText:@"" rightText:@""];
     [self.theSimpleNavigationBar.titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.theSimpleNavigationBar.bottomLineView.hidden = YES;
@@ -65,6 +66,9 @@
     
     [RACObserve(self.boardView, reloadHeight) subscribeNext:^(id x) {
         self.boardViewHeight = self.boardView.reloadHeight;
+        [self.boardView.view mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(self.boardView.reloadHeight);
+        }];
     }];
     
     UIView *newsTitleView = [[UIView alloc] init];
@@ -96,13 +100,20 @@
     }];
     [self addChildViewController:self.tableNewView];
     
+    // 显示初始星座
     if ([UserDefaultsTool getStringWithKey:constellationNumber] && ![[UserDefaultsTool getStringWithKey:constellationNumber]isEqualToString:@""]) {
         self.viewModel.model = self.viewModel.dataArray[[[UserDefaultsTool getStringWithKey:constellationNumber] integerValue]];
-        [self reload];
     } else {
         [self choseConstellationAction:nil];
     }
-
+    
+    [self.viewModel.subject_getDate sendNext:@YES];
+    
+    @weakify(self)
+    self.viewModel.block_reloadDate = ^{
+        @strongify(self)
+        [self reload];
+    };
 }
 
 
@@ -118,7 +129,12 @@
         ConstellaDetailModel *model = [self.viewModel.dataArray objectAtIndex:index-1];
         self.viewModel.model = model;
         [UserDefaultsTool setString:[NSString stringWithFormat:@"%ld",(long)index] withKey:constellationNumber];
-        [self reload];
+        [self.viewModel.subject_getDate sendNext:@YES];
+        @weakify(self)
+        self.viewModel.block_reloadDate = ^{
+            @strongify(self)
+            [self reload];
+        };
     };
 }
 
@@ -164,6 +180,7 @@
 }
 
 - (void)reload {
+    self.boardView.dataArray = self.viewModel.serverArray;
     [self.boardView reloadData];
     NSString *string = [self.viewModel.model.consteJttz substringToIndex:36];
     self.desLabel.text = [NSString stringWithFormat:@"%@...[详情]",string];

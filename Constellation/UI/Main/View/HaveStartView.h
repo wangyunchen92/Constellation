@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ConstellationModel;
 
 @interface HaveStartView : UIView
 @property (nonatomic, assign)CGFloat reloadHeight;
 @property (nonatomic, assign)NSInteger type;
-- (void)getDateForeModel:(NSDictionary *)dic;
+- (void)getDateForeModel:(ConstellationModel *)model;
 @end

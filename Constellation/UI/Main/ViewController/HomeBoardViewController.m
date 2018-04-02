@@ -45,7 +45,11 @@
 
 // 每个Icon 对应产生的View
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
+    
     HomeBoardIteamViewController *VC = [[HomeBoardIteamViewController alloc] init];
+    if (self.dataArray.count == 5) {
+        VC.model =  [self.dataArray objectAtIndex:index];
+    }
     if (index == 2) {
         VC.type = 1;
     } else if (index == 3) {
@@ -57,8 +61,8 @@
 }
 
 - (void)pageController:(WMPageController *)pageController showViewController:(__kindof HomeBoardIteamViewController *)viewController withInfo:(NSDictionary *)info {
+    
     [self.view mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(viewController.reloadHeight+ 44);
         self.reloadHeight = viewController.reloadHeight+ 44;
     }];
 }

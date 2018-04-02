@@ -22,17 +22,19 @@
     [super viewDidLoad];
 //    self.ztyxLabel.hidden = YES;
     self.boardView.type = self.type;
-    [self.boardView getDateForeModel:nil];
-    self.reloadHeight = self.boardView.reloadHeight;
-
+    [RACObserve(self.boardView, reloadHeight) subscribeNext:^(id x) {
+        self.reloadHeight = self.boardView.reloadHeight;
+        self.boardViewHeightConstraint.constant = self.boardView.reloadHeight;
+        [self.view setHeight:self.boardView.reloadHeight];;
+    }];
+    
+     [self.boardView getDateForeModel:self.model];
     // Do any additional setup after loading the view from its nib.
 }
+
 - (void)viewWillAppear:(BOOL)animated {
 
 }
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

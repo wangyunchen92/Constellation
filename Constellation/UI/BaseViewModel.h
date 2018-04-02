@@ -12,7 +12,6 @@
 @interface BaseViewModel : NSObject
 @property (nonatomic, strong)NSMutableArray *dataArray;
 @property (nonatomic, strong)RACSubject *subject_getDate;
-@property (nonatomic, strong)ConstellaDetailModel *model;
 @property (nonatomic, copy)void (^block_reloadDate)(void);
 - (void)initSigin;
 @end

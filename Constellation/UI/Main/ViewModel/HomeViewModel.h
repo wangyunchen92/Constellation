@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface HomeViewModel : BaseViewModel
+@property (nonatomic, strong)ConstellaDetailModel *model;
+@property (nonatomic, strong)NSMutableArray *serverArray;
 
 
 @end

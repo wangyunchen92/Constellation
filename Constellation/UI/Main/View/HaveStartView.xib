@@ -18,12 +18,16 @@
                 <outlet property="boardThreeLabel" destination="Mnf-8T-nUI" id="2GN-pC-Prr"/>
                 <outlet property="firstStartView" destination="BVj-6J-Pdm" id="eyH-nN-ran"/>
                 <outlet property="fourStartView" destination="Jmg-C1-oJQ" id="h4g-3J-SgD"/>
+                <outlet property="hiddenFirstImage" destination="p3X-60-bha" id="eIL-C7-n90"/>
+                <outlet property="hiddenFirstLabel" destination="vFh-Mg-ei0" id="h0u-BJ-PQb"/>
+                <outlet property="hiddenLabelTopConstraint" destination="Eaa-V5-amg" id="FH8-7i-0a7"/>
                 <outlet property="labelTopConstraint" destination="sLT-Ru-Yvs" id="K3a-GL-qYj"/>
                 <outlet property="labelTwoTopConstraint" destination="xfr-Wg-9zb" id="KP9-Qz-gRc"/>
                 <outlet property="secendStartView" destination="5cm-Yh-hhD" id="FLp-Lb-YL0"/>
                 <outlet property="threeStartView" destination="Fq2-Fd-gOb" id="giU-1t-ltZ"/>
                 <outlet property="topFirstLabel" destination="mK6-e4-akb" id="VSh-7V-vts"/>
                 <outlet property="topFourLabel" destination="aaL-um-h0U" id="Kqy-cf-IgY"/>
+                <outlet property="topNameFirstLabel" destination="9lf-V3-K2o" id="qYD-kT-9yl"/>
                 <outlet property="topNameFourLabel" destination="5vR-AK-fbe" id="ZwB-vv-LBx"/>
                 <outlet property="topNameThreeLabel" destination="cBh-8X-flK" id="lcy-0q-BWE"/>
                 <outlet property="topNameTwoLabel" destination="Ysm-oE-3Kg" id="Zgk-xm-jip"/>

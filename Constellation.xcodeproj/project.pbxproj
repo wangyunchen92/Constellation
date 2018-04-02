@@ -43,6 +43,7 @@
 		D55D19FD206B7885003AC62A /* ConsteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55D19FB206B7885003AC62A /* ConsteDetailViewController.m */; };
 		D55D19FE206B7885003AC62A /* ConsteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55D19FC206B7885003AC62A /* ConsteDetailViewController.xib */; };
 		D55D1A01206B78A8003AC62A /* ConsteDeatilViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D55D1A00206B78A8003AC62A /* ConsteDeatilViewModel.m */; };
+		D57786B52071D6E600738E8A /* ConstellationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D57786B42071D6E600738E8A /* ConstellationModel.m */; };
 		D57CD46E1FC3C334001446D8 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = D57CD46D1FC3C334001446D8 /* Config.m */; };
 		D57CD4731FC3CA59001446D8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57CD4721FC3CA59001446D8 /* BaseViewController.m */; };
 		D57CD47A1FC3CB17001446D8 /* SimpleNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D57CD4791FC3CB17001446D8 /* SimpleNavigationBar.m */; };
@@ -195,6 +196,8 @@
 		D55D19FC206B7885003AC62A /* ConsteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsteDetailViewController.xib; sourceTree = "<group>"; };
 		D55D19FF206B78A8003AC62A /* ConsteDeatilViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsteDeatilViewModel.h; sourceTree = "<group>"; };
 		D55D1A00206B78A8003AC62A /* ConsteDeatilViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsteDeatilViewModel.m; sourceTree = "<group>"; };
+		D57786B32071D6E600738E8A /* ConstellationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstellationModel.h; sourceTree = "<group>"; };
+		D57786B42071D6E600738E8A /* ConstellationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstellationModel.m; sourceTree = "<group>"; };
 		D57CD46A1FC3C1A6001446D8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D57CD46C1FC3C334001446D8 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		D57CD46D1FC3C334001446D8 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 			children = (
 				D55D19F4206B678B003AC62A /* ConstellaDetailModel.h */,
 				D55D19F5206B678B003AC62A /* ConstellaDetailModel.m */,
+				D57786B32071D6E600738E8A /* ConstellationModel.h */,
+				D57786B42071D6E600738E8A /* ConstellationModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1228,6 +1233,7 @@
 				D59DE0B72064A39000EE3167 /* NewHeadlineViewModel.m in Sources */,
 				D5059B5F2069E3F100914C01 /* YMWebProgressLayer.m in Sources */,
 				D59DE0C52064CA7E00EE3167 /* OneImageTableViewCell.m in Sources */,
+				D57786B52071D6E600738E8A /* ConstellationModel.m in Sources */,
 				D57CD4E91FC401AB001446D8 /* BackgroundViewController.m in Sources */,
 				D5A502622068A261001EBE10 /* HttpResponse.m in Sources */,
 				D5186236206CE328004C856B /* StartView.m in Sources */,

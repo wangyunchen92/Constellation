@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "ConstellationModel.h"
 
 @interface HomeBoardIteamViewController : BaseViewController
 @property (nonatomic, assign)CGFloat reloadHeight;
 @property (nonatomic, assign)NSInteger type;
+@property (nonatomic, strong)ConstellationModel *model;
 @end

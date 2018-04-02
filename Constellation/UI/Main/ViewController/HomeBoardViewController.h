@@ -12,4 +12,5 @@
 @interface HomeBoardViewController : WMPageController
 
 @property (nonatomic, assign)CGFloat reloadHeight;
+@property (nonatomic, strong)NSMutableArray *dataArray;
 @end
