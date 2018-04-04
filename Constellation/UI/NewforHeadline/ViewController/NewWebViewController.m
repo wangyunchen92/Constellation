@@ -20,7 +20,7 @@
     [super viewDidLoad];
 
     [self createNavWithTitle:@"" leftImage:@"Whiteback" rightText:@""];
-    self.theSimpleNavigationBar.backgroundColor = RGB(42, 96, 236);
+    self.theSimpleNavigationBar.backgroundColor = RGB(85, 15, 201);
     [self.theSimpleNavigationBar.titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.webView.backgroundColor = [UIColor clearColor];
 

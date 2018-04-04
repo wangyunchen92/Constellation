@@ -34,7 +34,10 @@
         model.parameters = params;
         model.url = GetConsteDetail;
         model.name = @"星座内容详情";
+        
+        [BasePopoverView showHUDToWindow:YES withMessage:@"加载中..."];
         [[HttpClient sharedInstance]requestApiWithHttpRequestMode:model Success:^(HttpRequest *request, HttpResponse *response) {
+            [BasePopoverView hideHUDForWindow:YES];
             ConstellaDayModel *dayModel = [[ConstellaDayModel alloc] init];
             [dayModel getDateForeServer:[response.result dictForKey:@"day"]];
             
@@ -72,40 +75,40 @@
 - (NSString *)consteTranslate:(NSInteger )tag {
     NSString *str;
     switch (tag) {
-        case 0:
+        case 1:
             str = @"shuiping";
             break;
-        case 1:
+        case 2:
             str = @"shuangyu";
             break;
-        case 2:
+        case 3:
             str = @"baiyang";
             break;
-        case 3:
+        case 4:
             str = @"jinniu";
             break;
-        case 4:
+        case 5:
             str = @"shuangzi";
             break;
-        case 5:
+        case 6:
             str = @"juxie";
             break;
-        case 6:
+        case 7:
             str = @"shizi";
             break;
-        case 7:
+        case 8:
             str = @"chunv";
             break;
-        case 8:
+        case 9:
             str = @"tiancheng";
             break;
-        case 9:
+        case 10:
             str = @"tianxie";
             break;
-        case 10:
+        case 11:
             str = @"sheshou";
             break;
-        case 11:
+        case 12:
             str = @"mojie";
             break;
         default:

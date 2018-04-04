@@ -1431,4 +1431,52 @@
     return str;
 }
 
++ (BOOL)isfristDateLogin {
+    NSDateFormatter *dateformate = [[NSDateFormatter alloc]init];
+    dateformate.dateFormat = @"yyyy-MM-dd";
+    if (![[UserDefaultsTool getStringWithKey:LoginDate] isEqualToString:@""] ) {
+        NSString *datestring = [UserDefaultsTool getStringWithKey:LoginDate];
+        
+        NSDate *date1 = [dateformate dateFromString:datestring];
+        NSDate *date = [NSDate date];
+        NSTimeZone *zone = [NSTimeZone systemTimeZone];
+        NSTimeInterval seconds = [zone secondsFromGMTForDate:date];
+        NSDate *nowDate = [date dateByAddingTimeInterval:seconds];
+        
+        NSString *nowstring = [dateformate stringFromDate:nowDate];
+        if (![self isSameDay:date1 date2:nowDate]) {
+            [UserDefaultsTool setString:nowstring withKey:LoginDate];
+            [UserDefaultsTool setBool:YES withKey:isFirstLogin];
+
+            return YES;
+        }else {
+            [UserDefaultsTool setBool:NO withKey:isFirstLogin];
+            return NO;
+        }
+    } else {
+        NSDate *date = [NSDate date];
+        NSTimeZone *zone = [NSTimeZone systemTimeZone];
+        NSTimeInterval seconds = [zone secondsFromGMTForDate:date];
+        NSDate *nowDate = [date dateByAddingTimeInterval:seconds];
+        NSString *nowstring = [dateformate stringFromDate:nowDate];
+        [UserDefaultsTool setString:nowstring withKey:LoginDate];
+        [UserDefaultsTool setBool:YES withKey:isFirstLogin];
+
+        return YES;
+    }
+}
+
++ (BOOL)isSameDay:(NSDate*)date1 date2:(NSDate*)date2 {
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1 = [calendar components:unitFlags fromDate:date1];
+    NSDateComponents* comp2 = [calendar components:unitFlags fromDate:date2];
+    
+    return [comp1 day]   == [comp2 day] &&
+    [comp1 month] == [comp2 month] &&
+    [comp1 year]  == [comp2 year];
+}
+
+
 @end

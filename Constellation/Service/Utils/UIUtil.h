@@ -125,4 +125,7 @@
                   confirmHandler:(void(^)(UIAlertAction *confirmAction))confirmHandler
                    cancelHandler:(void(^)(UIAlertAction *cancelAction))cancelHandler
                   viewController:(UIViewController *)vc;
+
+//设置layer
++ (void)viewLayerWithView:(UIView* )view  cornerRadius:(CGFloat)cornerRadius boredColor:(UIColor* )boredColor borderWidth:(CGFloat)borderWidth;
 @end

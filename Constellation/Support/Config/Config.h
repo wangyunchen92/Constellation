@@ -18,6 +18,15 @@ else { \
 dispatch_async(dispatch_get_main_queue(), block); \
 }
 
+
+#define kChannel              @"qsjk"
+#define KType                 @"qsjk"
+#define kJpushAppKey          @"58f9579317663d13f68f4f91"//借点花花
+#define kUMAppKey             @"5ac1f1ebb27b0a36f80000e3"
+#define kIsProduct            YES
+
+
+
 //重新定义宏定义
 #define LOG_LEVEL_DEF ddLogLevel
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
@@ -97,6 +106,10 @@ static NSString *const userNameIdentifier = @"userName"; // 用户名
 static NSString *const phoneNumberIdentifier = @"phoneNumber"; //手机号码
 
 static NSString *const constellationNumber = @"constellationNumber";
+
+// 记录用户状态
+static NSString *const LoginDate = @"LoginDate";
+static NSString *const isFirstLogin= @"isFirstLogin"; // 是否第一次启动
 
 
 #define requestErrorStrings(error)  \

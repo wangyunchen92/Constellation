@@ -11,6 +11,7 @@
 @interface NewTableViewController : UITableViewController
 
 @property (nonatomic, assign)BOOL canScroll;
+@property (nonatomic, assign)BOOL needScrollForScrollerView;
 - (instancetype)initWithType:(NSString *)type;
 
 @end

@@ -26,6 +26,7 @@
     if (self) {
         self.viewModel = [[NewHeadlineViewModel alloc] init];
         self.viewModel.typeString = type;
+        self.needScrollForScrollerView = YES;
 
     }
     return self;
@@ -94,7 +95,9 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+    if (self.needScrollForScrollerView) {
+        return;
+    }
     if (!self.canScroll) {
         scrollView.contentOffset = CGPointZero;
     }

@@ -283,4 +283,17 @@
     return alertController;
 }
 
+//设置layer
++ (void)viewLayerWithView:(UIView* )view  cornerRadius:(CGFloat)cornerRadius boredColor:(UIColor* )boredColor borderWidth:(CGFloat)borderWidth{
+    
+    if (boredColor == nil) {
+        boredColor = [UIColor clearColor];
+    }
+    view.layer.cornerRadius = cornerRadius;
+    view.layer.borderColor = boredColor.CGColor;
+    view.layer.borderWidth = borderWidth;
+    view.clipsToBounds = cornerRadius;
+    
+}
+
 @end

@@ -14,6 +14,7 @@
 #import "HomeBoardViewController.h"
 #import "NewTableViewController.h"
 #import "BaseScroller.h"
+#import "YMUpdateView.h"
 
 
 @interface HomeViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
@@ -90,6 +91,7 @@
     
     
     self.tableNewView = [[NewTableViewController alloc] initWithType:@"all"];
+    self.tableNewView.needScrollForScrollerView = NO;
     [self.scrollerView addSubview:self.tableNewView.view];
     [self.tableNewView.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.scrollerView);
@@ -102,7 +104,7 @@
     
     // 显示初始星座
     if ([UserDefaultsTool getStringWithKey:constellationNumber] && ![[UserDefaultsTool getStringWithKey:constellationNumber]isEqualToString:@""]) {
-        self.viewModel.model = self.viewModel.dataArray[[[UserDefaultsTool getStringWithKey:constellationNumber] integerValue]];
+        self.viewModel.model = self.viewModel.dataArray[[[UserDefaultsTool getStringWithKey:constellationNumber] integerValue] - 1];
     } else {
         [self choseConstellationAction:nil];
     }
@@ -182,8 +184,11 @@
 - (void)reload {
     self.boardView.dataArray = self.viewModel.serverArray;
     [self.boardView reloadData];
-    NSString *string = [self.viewModel.model.consteJttz substringToIndex:36];
-    self.desLabel.text = [NSString stringWithFormat:@"%@...[详情]",string];
+    if (self.viewModel.model.consteJttz.length > 36) {
+        NSString *string = [self.viewModel.model.consteJttz substringToIndex:36];
+        self.desLabel.text = [NSString stringWithFormat:@"%@...[详情]",string];
+    }
+
     self.imageView.image = IMAGE_NAME([ToolUtil imagetrans:[self.viewModel.model.consteID integerValue]]);
     self.nameLabel.text = self.viewModel.model.consteName;
 }

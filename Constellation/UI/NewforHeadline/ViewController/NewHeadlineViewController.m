@@ -52,7 +52,6 @@
 // 每个Icon 对应产生的View
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     NewTableViewController *VC = [[NewTableViewController alloc] initWithType:[self.viewModel.allKeyArray objectAtIndex: index]];
-    VC.canScroll = YES;
 //    UIViewController *VC = [[UIViewController alloc] init];
     return VC;
 

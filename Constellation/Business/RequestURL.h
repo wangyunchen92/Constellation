@@ -14,4 +14,6 @@ static  NSString *const GetNews = @"https://luck.youmeng.com/Api/App/getNews.htm
 
 static  NSString *const GetConsteDetail = @"https://luck.youmeng.com/Api/Third/getConstellationList.html";
 
+static NSString *const GetApkUpdate = @"https://luck.youmeng.com/Api/App/getApkUpdate.html";
+
 #endif /* RequestURL_h */

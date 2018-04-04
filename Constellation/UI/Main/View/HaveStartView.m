@@ -46,6 +46,7 @@
     [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HaveStartView class]) owner:self options:nil];
     [self addSubview:self.view];
     self.view.frame = CGRectMake(0, 0, kScreenWidth, self.height);
+
 }
 
 - (void)getDateForeModel:(ConstellationModel *)model {
