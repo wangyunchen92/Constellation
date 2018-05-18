@@ -33,6 +33,14 @@
 		D53B7C1F1FC2ECA000395E69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B7C1E1FC2ECA000395E69 /* main.m */; };
 		D53B7C291FC2ECA000395E69 /* ConstellationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B7C281FC2ECA000395E69 /* ConstellationTests.m */; };
 		D53B7C341FC2ECA000395E69 /* ConstellationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B7C331FC2ECA000395E69 /* ConstellationUITests.m */; };
+		D53F793720ABDB4200264254 /* MainSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F793520ABDB4200264254 /* MainSetViewController.m */; };
+		D53F793820ABDB4200264254 /* MainSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53F793620ABDB4200264254 /* MainSetViewController.xib */; };
+		D53F793C20ABDBA800264254 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F793A20ABDBA800264254 /* AboutUsViewController.m */; };
+		D53F793D20ABDBA800264254 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53F793B20ABDBA800264254 /* AboutUsViewController.xib */; };
+		D53F794220ABFC6700264254 /* HongbaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F794020ABFC6700264254 /* HongbaoViewController.m */; };
+		D53F794320ABFC6700264254 /* HongbaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53F794120ABFC6700264254 /* HongbaoViewController.xib */; };
+		D53F794920AC1FBB00264254 /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F794520AC1FBB00264254 /* PGIndexBannerSubiew.m */; };
+		D53F794A20AC1FBB00264254 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F794620AC1FBB00264254 /* NewPagedFlowView.m */; };
 		D55D19E0206B2AC5003AC62A /* ChoseConstellationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55D19DE206B2AC5003AC62A /* ChoseConstellationViewController.m */; };
 		D55D19E1206B2AC5003AC62A /* ChoseConstellationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55D19DF206B2AC5003AC62A /* ChoseConstellationViewController.xib */; };
 		D55D19EB206B2CEA003AC62A /* XWPresentOneTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D55D19E3206B2CEA003AC62A /* XWPresentOneTransition.m */; };
@@ -98,8 +106,15 @@
 		D5A5026E2068A66E001EBE10 /* NewHealineTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A5026D2068A66E001EBE10 /* NewHealineTitleViewModel.m */; };
 		D5A502772068C882001EBE10 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A502762068C882001EBE10 /* NSDictionary+Log.m */; };
 		D5A5027A2068DA53001EBE10 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A502792068DA53001EBE10 /* NewsModel.m */; };
-		D5A5027C2068EBE1001EBE10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A5027B2068EBE1001EBE10 /* Images.xcassets */; };
 		D5A5027F2068F3EB001EBE10 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A5027D2068F3EB001EBE10 /* BaseViewModel.m */; };
+		D5CCC26E2079AC8E00967558 /* HestoryDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC26D2079AC8E00967558 /* HestoryDayView.m */; };
+		D5CCC2702079ACAC00967558 /* HestoryDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CCC26F2079ACAC00967558 /* HestoryDayView.xib */; };
+		D5CCC2742079C07200967558 /* PostWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC2722079C07200967558 /* PostWebViewController.m */; };
+		D5CCC2752079C07200967558 /* PostWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CCC2732079C07200967558 /* PostWebViewController.xib */; };
+		D5CCC2792079C2E700967558 /* HestoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC2772079C2E700967558 /* HestoryDayViewController.m */; };
+		D5CCC27A2079C2E700967558 /* HestoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CCC2782079C2E700967558 /* HestoryDayViewController.xib */; };
+		D5CCC27E2079C33600967558 /* HestoryDayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC27C2079C33600967558 /* HestoryDayTableViewCell.m */; };
+		D5CCC27F2079C33600967558 /* HestoryDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CCC27D2079C33600967558 /* HestoryDayTableViewCell.xib */; };
 		D5DD67D7207358F500A97941 /* CommandTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DD67D5207358F500A97941 /* CommandTool.m */; };
 		D5DD67DA2073598D00A97941 /* YMUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DD67D92073598D00A97941 /* YMUpdateView.m */; };
 		D5DD67DE2073672F00A97941 /* HZLaunchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DD67DB2073672F00A97941 /* HZLaunchImageViewController.m */; };
@@ -187,6 +202,19 @@
 		D53B7C2F1FC2ECA000395E69 /* ConstellationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConstellationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53B7C331FC2ECA000395E69 /* ConstellationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstellationUITests.m; sourceTree = "<group>"; };
 		D53B7C351FC2ECA000395E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53F793420ABDB4200264254 /* MainSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSetViewController.h; sourceTree = "<group>"; };
+		D53F793520ABDB4200264254 /* MainSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSetViewController.m; sourceTree = "<group>"; };
+		D53F793620ABDB4200264254 /* MainSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSetViewController.xib; sourceTree = "<group>"; };
+		D53F793920ABDBA800264254 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		D53F793A20ABDBA800264254 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		D53F793B20ABDBA800264254 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		D53F793F20ABFC6700264254 /* HongbaoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HongbaoViewController.h; sourceTree = "<group>"; };
+		D53F794020ABFC6700264254 /* HongbaoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HongbaoViewController.m; sourceTree = "<group>"; };
+		D53F794120ABFC6700264254 /* HongbaoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HongbaoViewController.xib; sourceTree = "<group>"; };
+		D53F794520AC1FBB00264254 /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
+		D53F794620AC1FBB00264254 /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
+		D53F794720AC1FBB00264254 /* PGIndexBannerSubiew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIndexBannerSubiew.h; sourceTree = "<group>"; };
+		D53F794820AC1FBB00264254 /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
 		D55D19DD206B2AC5003AC62A /* ChoseConstellationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoseConstellationViewController.h; sourceTree = "<group>"; };
 		D55D19DE206B2AC5003AC62A /* ChoseConstellationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoseConstellationViewController.m; sourceTree = "<group>"; };
 		D55D19DF206B2AC5003AC62A /* ChoseConstellationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoseConstellationViewController.xib; sourceTree = "<group>"; };
@@ -313,9 +341,20 @@
 		D5A502762068C882001EBE10 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		D5A502782068DA53001EBE10 /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		D5A502792068DA53001EBE10 /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
-		D5A5027B2068EBE1001EBE10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D5A5027D2068F3EB001EBE10 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		D5A5027E2068F3EB001EBE10 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		D5CCC26C2079AC8E00967558 /* HestoryDayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestoryDayView.h; sourceTree = "<group>"; };
+		D5CCC26D2079AC8E00967558 /* HestoryDayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HestoryDayView.m; sourceTree = "<group>"; };
+		D5CCC26F2079ACAC00967558 /* HestoryDayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HestoryDayView.xib; sourceTree = "<group>"; };
+		D5CCC2712079C07200967558 /* PostWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostWebViewController.h; sourceTree = "<group>"; };
+		D5CCC2722079C07200967558 /* PostWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostWebViewController.m; sourceTree = "<group>"; };
+		D5CCC2732079C07200967558 /* PostWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostWebViewController.xib; sourceTree = "<group>"; };
+		D5CCC2762079C2E700967558 /* HestoryDayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestoryDayViewController.h; sourceTree = "<group>"; };
+		D5CCC2772079C2E700967558 /* HestoryDayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HestoryDayViewController.m; sourceTree = "<group>"; };
+		D5CCC2782079C2E700967558 /* HestoryDayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HestoryDayViewController.xib; sourceTree = "<group>"; };
+		D5CCC27B2079C33600967558 /* HestoryDayTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestoryDayTableViewCell.h; sourceTree = "<group>"; };
+		D5CCC27C2079C33600967558 /* HestoryDayTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HestoryDayTableViewCell.m; sourceTree = "<group>"; };
+		D5CCC27D2079C33600967558 /* HestoryDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HestoryDayTableViewCell.xib; sourceTree = "<group>"; };
 		D5DD67D42073221A00A97941 /* Constellation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Constellation.entitlements; sourceTree = "<group>"; };
 		D5DD67D5207358F500A97941 /* CommandTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTool.m; sourceTree = "<group>"; };
 		D5DD67D6207358F500A97941 /* CommandTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandTool.h; sourceTree = "<group>"; };
@@ -449,6 +488,12 @@
 				D518623F206DD459004C856B /* HaveStartView.xib */,
 				D5186243206E13EE004C856B /* BaseScroller.h */,
 				D5186244206E13EE004C856B /* BaseScroller.m */,
+				D5CCC26C2079AC8E00967558 /* HestoryDayView.h */,
+				D5CCC26D2079AC8E00967558 /* HestoryDayView.m */,
+				D5CCC26F2079ACAC00967558 /* HestoryDayView.xib */,
+				D5CCC27B2079C33600967558 /* HestoryDayTableViewCell.h */,
+				D5CCC27C2079C33600967558 /* HestoryDayTableViewCell.m */,
+				D5CCC27D2079C33600967558 /* HestoryDayTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +515,18 @@
 				D55D19FA206B7885003AC62A /* ConsteDetailViewController.h */,
 				D55D19FB206B7885003AC62A /* ConsteDetailViewController.m */,
 				D55D19FC206B7885003AC62A /* ConsteDetailViewController.xib */,
+				D5CCC2712079C07200967558 /* PostWebViewController.h */,
+				D5CCC2722079C07200967558 /* PostWebViewController.m */,
+				D5CCC2732079C07200967558 /* PostWebViewController.xib */,
+				D5CCC2762079C2E700967558 /* HestoryDayViewController.h */,
+				D5CCC2772079C2E700967558 /* HestoryDayViewController.m */,
+				D5CCC2782079C2E700967558 /* HestoryDayViewController.xib */,
+				D53F793420ABDB4200264254 /* MainSetViewController.h */,
+				D53F793520ABDB4200264254 /* MainSetViewController.m */,
+				D53F793620ABDB4200264254 /* MainSetViewController.xib */,
+				D53F793920ABDBA800264254 /* AboutUsViewController.h */,
+				D53F793A20ABDBA800264254 /* AboutUsViewController.m */,
+				D53F793B20ABDBA800264254 /* AboutUsViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -508,7 +565,6 @@
 				D5A502412068A261001EBE10 /* Business */,
 				D53B7C0F1FC2ECA000395E69 /* AppDelegate.h */,
 				D53B7C101FC2ECA000395E69 /* AppDelegate.m */,
-				D5A5027B2068EBE1001EBE10 /* Images.xcassets */,
 			);
 			path = Constellation;
 			sourceTree = "<group>";
@@ -529,6 +585,27 @@
 				D53B7C351FC2ECA000395E69 /* Info.plist */,
 			);
 			path = ConstellationUITests;
+			sourceTree = "<group>";
+		};
+		D53F793E20ABFC5C00264254 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D53F793F20ABFC6700264254 /* HongbaoViewController.h */,
+				D53F794020ABFC6700264254 /* HongbaoViewController.m */,
+				D53F794120ABFC6700264254 /* HongbaoViewController.xib */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D53F794420AC1FBB00264254 /* NewPagedFlowView */ = {
+			isa = PBXGroup;
+			children = (
+				D53F794520AC1FBB00264254 /* PGIndexBannerSubiew.m */,
+				D53F794620AC1FBB00264254 /* NewPagedFlowView.m */,
+				D53F794720AC1FBB00264254 /* PGIndexBannerSubiew.h */,
+				D53F794820AC1FBB00264254 /* NewPagedFlowView.h */,
+			);
+			path = NewPagedFlowView;
 			sourceTree = "<group>";
 		};
 		D55D19E2206B2CEA003AC62A /* PresentTransition */ = {
@@ -571,6 +648,7 @@
 		D57CD4701FC3C9C2001446D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D53F793E20ABFC5C00264254 /* common */,
 				D5059B66206A2E5700914C01 /* Main */,
 				D59DE0AD2064A2F300EE3167 /* NewforHeadline */,
 				D57CD4D71FC3FF70001446D8 /* Load */,
@@ -591,6 +669,7 @@
 		D57CD4741FC3CAD7001446D8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D53F794420AC1FBB00264254 /* NewPagedFlowView */,
 				D5DD67E02073794800A97941 /* UM */,
 				D55D19E2206B2CEA003AC62A /* PresentTransition */,
 				D5A502672068A362001EBE10 /* Loading control */,
@@ -1007,12 +1086,16 @@
 		D53B7C041FC2ECA000395E69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Sj03;
 				TargetAttributes = {
 					D53B7C0B1FC2ECA000395E69 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1058,18 +1141,24 @@
 			files = (
 				D5059B5C2069E30300914C01 /* NewWebViewController.xib in Resources */,
 				D59DE0C12064C78E00EE3167 /* NewTableViewController.xib in Resources */,
+				D5CCC27A2079C2E700967558 /* HestoryDayViewController.xib in Resources */,
+				D5CCC27F2079C33600967558 /* HestoryDayTableViewCell.xib in Resources */,
 				D59DE0BC2064A73A00EE3167 /* MainNewHealineViewController.xib in Resources */,
-				D5A5027C2068EBE1001EBE10 /* Images.xcassets in Resources */,
 				D5FC6B802068993C004E1485 /* ThreeImageTableViewCell.xib in Resources */,
+				D53F793820ABDB4200264254 /* MainSetViewController.xib in Resources */,
 				D5186238206CE331004C856B /* StartView.xib in Resources */,
 				D5186233206CCE7A004C856B /* HomeBoardIteamViewController.xib in Resources */,
 				D55D19FE206B7885003AC62A /* ConsteDetailViewController.xib in Resources */,
 				D53B7C191FC2ECA000395E69 /* Assets.xcassets in Resources */,
+				D5CCC2752079C07200967558 /* PostWebViewController.xib in Resources */,
 				D5186240206DD459004C856B /* HaveStartView.xib in Resources */,
 				D59DE0C62064CA7E00EE3167 /* OneImageTableViewCell.xib in Resources */,
 				D57CD4E31FC3FFE8001446D8 /* LoginViewController.xib in Resources */,
+				D53F794320ABFC6700264254 /* HongbaoViewController.xib in Resources */,
+				D53F793D20ABDBA800264254 /* AboutUsViewController.xib in Resources */,
 				D5059B7A206A3BD300914C01 /* HomeViewController.xib in Resources */,
 				D55D19F3206B5DC3003AC62A /* constellation.db in Resources */,
+				D5CCC2702079ACAC00967558 /* HestoryDayView.xib in Resources */,
 				D55D19E1206B2AC5003AC62A /* ChoseConstellationViewController.xib in Resources */,
 				D5DD67DF2073672F00A97941 /* HZLaunchImageViewController.xib in Resources */,
 			);
@@ -1249,6 +1338,7 @@
 				D5A502642068A261001EBE10 /* HttpError.m in Sources */,
 				D57CD46E1FC3C334001446D8 /* Config.m in Sources */,
 				D5A502652068A261001EBE10 /* UploadModel.m in Sources */,
+				D53F793720ABDB4200264254 /* MainSetViewController.m in Sources */,
 				D57CD4C21FC3D5F9001446D8 /* UIColor+Hex.m in Sources */,
 				D57CD4871FC3CBD6001446D8 /* UIUtil.m in Sources */,
 				D57CD4BD1FC3D5F9001446D8 /* UIButton+TouchAreaInsets.m in Sources */,
@@ -1262,6 +1352,7 @@
 				D57CD4C61FC3D5F9001446D8 /* NSString+Extension.m in Sources */,
 				D57CD4E61FC40100001446D8 /* LoginViewModel.m in Sources */,
 				D57CD4C81FC3D5F9001446D8 /* NSDictionary+Utils.m in Sources */,
+				D53F794A20AC1FBB00264254 /* NewPagedFlowView.m in Sources */,
 				D57CD4BE1FC3D5F9001446D8 /* NSDate+CustomDate.m in Sources */,
 				D5186232206CCE7A004C856B /* HomeBoardIteamViewController.m in Sources */,
 				D5A502612068A261001EBE10 /* HttpClient.m in Sources */,
@@ -1273,8 +1364,10 @@
 				D55D1A01206B78A8003AC62A /* ConsteDeatilViewModel.m in Sources */,
 				D5A5025C2068A261001EBE10 /* YYDiskCache.m in Sources */,
 				D55D19F9206B7387003AC62A /* HomeViewModel.m in Sources */,
+				D53F794220ABFC6700264254 /* HongbaoViewController.m in Sources */,
 				D5059B79206A3BD300914C01 /* HomeViewController.m in Sources */,
 				D53B7C1F1FC2ECA000395E69 /* main.m in Sources */,
+				D5CCC26E2079AC8E00967558 /* HestoryDayView.m in Sources */,
 				D59DE0BB2064A73A00EE3167 /* MainNewHealineViewController.m in Sources */,
 				D55D19F6206B678B003AC62A /* ConstellaDetailModel.m in Sources */,
 				D5A5027F2068F3EB001EBE10 /* BaseViewModel.m in Sources */,
@@ -1298,6 +1391,7 @@
 				D5A5026E2068A66E001EBE10 /* NewHealineTitleViewModel.m in Sources */,
 				D5DD67DA2073598D00A97941 /* YMUpdateView.m in Sources */,
 				D5059B622069E5AE00914C01 /* NSTimer+addition.m in Sources */,
+				D5CCC2792079C2E700967558 /* HestoryDayViewController.m in Sources */,
 				D57CD47A1FC3CB17001446D8 /* SimpleNavigationBar.m in Sources */,
 				D518622E206CC84A004C856B /* HomeBoardViewController.m in Sources */,
 				D5059B7D206A3C1E00914C01 /* MainViewController.m in Sources */,
@@ -1310,13 +1404,17 @@
 				D5A5026A2068A362001EBE10 /* BasePopoverView.m in Sources */,
 				D59DE0B42064A37800EE3167 /* NewHeadlineViewController.m in Sources */,
 				D5DD67DE2073672F00A97941 /* HZLaunchImageViewController.m in Sources */,
+				D53F794920AC1FBB00264254 /* PGIndexBannerSubiew.m in Sources */,
 				D55D19E0206B2AC5003AC62A /* ChoseConstellationViewController.m in Sources */,
+				D5CCC27E2079C33600967558 /* HestoryDayTableViewCell.m in Sources */,
 				D55D19F1206B5CC5003AC62A /* FMManage.m in Sources */,
 				D5A5025D2068A261001EBE10 /* YYCache.m in Sources */,
 				D5A5025E2068A261001EBE10 /* YYKVStorage.m in Sources */,
 				D57CD4BC1FC3D5F9001446D8 /* UIImage+FX.m in Sources */,
 				D5DD67D7207358F500A97941 /* CommandTool.m in Sources */,
+				D5CCC2742079C07200967558 /* PostWebViewController.m in Sources */,
 				D57CD4C41FC3D5F9001446D8 /* NSString+CMUtils.m in Sources */,
+				D53F793C20ABDBA800264254 /* AboutUsViewController.m in Sources */,
 				D5A502772068C882001EBE10 /* NSDictionary+Log.m in Sources */,
 				D5A5027A2068DA53001EBE10 /* NewsModel.m in Sources */,
 				D57CD4851FC3CBD6001446D8 /* NavigationBarUIUtil.m in Sources */,
@@ -1472,7 +1570,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Constellation/Constellation.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BXNJAEDFYS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1483,8 +1582,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.constellation.youmeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f2a10696-50d3-40eb-b278-27e4764beed2";
-				PROVISIONING_PROFILE_SPECIFIER = conste;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1496,7 +1595,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Constellation/Constellation.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BXNJAEDFYS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1507,8 +1607,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.constellation.youmeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f2a10696-50d3-40eb-b278-27e4764beed2";
-				PROVISIONING_PROFILE_SPECIFIER = conste;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

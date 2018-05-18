@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +14,7 @@
                 <outlet property="NameMaskView" destination="wwO-9k-Uv4" id="hYg-R4-bAs"/>
                 <outlet property="dateLabel" destination="vNc-OV-Oak" id="n5f-3T-D1n"/>
                 <outlet property="desLabel" destination="wbI-mI-kFT" id="EjI-wc-dCu"/>
+                <outlet property="hongbaobutton" destination="tvQ-gV-QrX" id="pnZ-Aa-M7X"/>
                 <outlet property="imageView" destination="a6C-X9-Kex" id="V5C-lo-DVF"/>
                 <outlet property="nameLabel" destination="ZkT-24-gb6" id="ihe-5w-HPS"/>
                 <outlet property="scrollerView" destination="b19-Do-grb" id="khe-b2-Bpp"/>
@@ -118,11 +119,23 @@
                         <outlet property="delegate" destination="-1" id="7w1-i9-gUz"/>
                     </connections>
                 </scrollView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvQ-gV-QrX">
+                    <rect key="frame" x="291" y="25" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7TX-5a-yJ3"/>
+                        <constraint firstAttribute="width" constant="30" id="ak0-Xw-NVy"/>
+                    </constraints>
+                    <connections>
+                        <action selector="hongbaoAction:" destination="-1" eventType="touchUpInside" id="fsv-Zp-3ru"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="tvQ-gV-QrX" secondAttribute="trailing" constant="54" id="FfJ-en-Wwp"/>
                 <constraint firstAttribute="trailing" secondItem="b19-Do-grb" secondAttribute="trailing" id="MwZ-Wd-iee"/>
                 <constraint firstAttribute="bottom" secondItem="b19-Do-grb" secondAttribute="bottom" id="OK1-VV-qV1"/>
+                <constraint firstItem="tvQ-gV-QrX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="TuS-Ed-Wgp"/>
                 <constraint firstItem="b19-Do-grb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oAw-Ot-lWS"/>
                 <constraint firstItem="z7T-Xy-Cag" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="oyb-f5-7R4"/>
                 <constraint firstItem="b19-Do-grb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="vZp-Mz-Jep"/>

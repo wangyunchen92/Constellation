@@ -49,7 +49,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kIOSVersions [[[UIDevice currentDevice] systemVersion] floatValue] //获得iOS版本
 #define kAppBuildVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
-#define kAppVersions [NSString stringWithFormat:@"%@.%@",[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] componentsSeparatedByString:@"."][0],[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] componentsSeparatedByString:@"."][1]]
+#define kAppVersions [NSString stringWithFormat:@"%@.%@.%@",[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] componentsSeparatedByString:@"."][0],[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] componentsSeparatedByString:@"."][1],[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] componentsSeparatedByString:@"."][2]]
 
 #define kUIWindow             [[[UIApplication sharedApplication] delegate]
 
@@ -110,6 +110,9 @@ static NSString *const constellationNumber = @"constellationNumber";
 // 记录用户状态
 static NSString *const LoginDate = @"LoginDate";
 static NSString *const isFirstLogin= @"isFirstLogin"; // 是否第一次启动
+static NSString *const isTest = @"istest"; // 是否为审核状态
+static NSString *const isRedPacketTest = @"isRedPacketTest"; // 是否为审核状态
+static NSString *const isMainBanner = @"isMainBanner"; // 是否有首页banner
 
 
 #define requestErrorStrings(error)  \

@@ -20,8 +20,35 @@
     if (self) {
         _model = [[ConstellaDetailModel alloc] init];
         _serverArray = [[NSMutableArray alloc] init];
+        _bannerArray = [[NSMutableArray alloc] initWithObjects:@"Banner1",@"测算页banner",@"Banner2", nil];
+        _subject_isRedPacket = [[RACSubject alloc] init];
+        [self initUsSigin];
     }
     return self;
+}
+
+- (void)initUsSigin {
+    [self.subject_isRedPacket subscribeNext:^(id x) {
+        HttpRequestMode* model = [[HttpRequestMode alloc]init];
+        NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+        [params addUnEmptyString:@"10" forKey:@"type"];
+        model.parameters = params;
+        model.url = GetRedPacketList;
+        model.name = @"红包";
+        [[HttpClient sharedInstance]requestApiWithHttpRequestMode:model Success:^(HttpRequest *request, HttpResponse *response) {
+            NSString *imagestr = [response.result stringForKey:@"icon"];
+            NSString *url = [response.result stringForKey:@"url"];
+            if (self.block_redPacket) {
+                self.block_redPacket(url,imagestr);
+            }
+        } Failure:^(HttpRequest *request, HttpResponse *response) {
+            [BasePopoverView showFailHUDToWindow:response.errorMsg];
+        } RequsetStart:^{
+            
+        } ResponseEnd:^{
+            
+        }];
+    }];
 }
 
 - (void)initSigin {
@@ -69,6 +96,7 @@
             
         }];
     }];
+   
 }
 
 

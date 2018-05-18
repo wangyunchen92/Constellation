@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = kColorWeekWhite;
     [self loadBaseUIData];
     [self loadUIData];
 }
@@ -115,7 +114,6 @@
     [dic setObject:kFontHWSmall forKey:NSFontAttributeName];
     [dic setObject:kColorHWBlack forKey:NSForegroundColorAttributeName];
     self.navigationController.navigationBar.titleTextAttributes = [dic copy];
-    self.view.backgroundColor = [UIColor whiteColor];
     if(kIOSVersions >= 7.0)
     {
         self.automaticallyAdjustsScrollViewInsets = NO;

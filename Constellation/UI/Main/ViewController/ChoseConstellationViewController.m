@@ -51,7 +51,9 @@
 
 - (IBAction)dismissAction:(id)sender {
     [self dismissViewControllerAnimated:NO completion:^{
-        
+        if (self.blocl_dismiss) {
+            self.blocl_dismiss();
+        }
     }];
 }
 

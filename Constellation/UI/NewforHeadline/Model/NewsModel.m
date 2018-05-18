@@ -26,16 +26,16 @@
     self.idString = [dic stringForKey:@"id"];
     self.titleString = [dic stringForKey:@"title"];
     self.urlString = [dic stringForKey:@"news_url"];
-    self.dateString = [dic stringForKey:@"publish_time"];
+    self.dateString = [dic stringForKey:@"collect_time"];
     
     if ([[dic stringForKey:@"show_type"] isEqualToString:@"4"]) {
         self.typeString = ThreeImage_NewType;
-        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"thumbnail_pic_s1"]]];
-        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"thumbnail_pic_s2"]]];
-        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"thumbnail_pic_s3"]]];
+        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"pic_s1"]]];
+        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"pic_s2"]]];
+        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"pic_s3"]]];
     } else if ([[dic stringForKey:@"show_type"] isEqualToString:@"3"]) {
         self.typeString = OneImage_NewType;
-        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"thumbnail_pic_s1"]]];
+        [self.iamgeArray addObject:[self httpreplacingHttps:[dic stringForKey:@"pic_s1"]]];
     }
     
     AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];

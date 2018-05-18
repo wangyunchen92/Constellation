@@ -24,7 +24,7 @@
 - (void)getDateForServer:(NewsModel *)model {
     self.titleLabel.text = model.titleString;
     self.dateLabel.text = model.dateString;
-    [self.shouImageView sd_setImageWithURL:[NSURL URLWithString:[model.iamgeArray firstObject]] placeholderImage:IMAGE_NAME(@"有效期(信用卡正面)")];
+    [self.shouImageView sd_setImageWithURL:[NSURL URLWithString:[model.iamgeArray firstObject]] placeholderImage:IMAGE_NAME(@"timg")];
     if (model.isread) {
         self.titleLabel.textColor = RGB(153, 153, 153);
     } else {

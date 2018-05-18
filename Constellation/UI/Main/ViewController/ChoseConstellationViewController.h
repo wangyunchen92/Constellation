@@ -10,5 +10,6 @@
 
 @interface ChoseConstellationViewController : BaseViewController
 @property (nonatomic, copy)void (^block_sele)(NSInteger index);
+@property (nonatomic, copy)void (^blocl_dismiss)(void);
 
 @end

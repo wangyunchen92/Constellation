@@ -90,15 +90,15 @@
 
     
     [self setTabBarItem:hNav
-                  title:@"首页"
-            selectImage:@"多彩b"
-          unselectImage:@"多彩"
+                  title:@"星座"
+            selectImage:@"星座选中"
+          unselectImage:@"星座未选中"
                     tag:1];
     
     [self setTabBarItem:mNav
-                  title:@"基金组合"
-            selectImage:@"投资管家-选中"
-          unselectImage:@"投资管家"
+                  title:@"新闻"
+            selectImage:@"头条选中"
+          unselectImage:@"头条未选中"
                     tag:2];
     self.viewControllers = @[hNav,mNav];
 }
@@ -122,10 +122,17 @@
     UIImage * normalImage = [IMAGE_NAME(unselectImage) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     navController.tabBarItem.title = title;
     
-    NSDictionary *normalDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                               UIColorFromRGB(0x004486),
-                               NSForegroundColorAttributeName, nil];
-    [navController.tabBarItem setTitleTextAttributes:normalDic forState:UIControlStateSelected];
+    NSDictionary *seleDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                               RGB(104, 58, 224),
+                               NSForegroundColorAttributeName
+                               ,nil];
+    [navController.tabBarItem setTitleTextAttributes:seleDic forState:UIControlStateSelected];
+    
+//
+//    NSDictionary *normalDic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14.0f],NSFontAttributeName,
+//                               nil];
+//    [navController.tabBarItem setTitleTextAttributes:normalDic forState:UIControlStateNormal];
+
     
     navController.tabBarItem.image = normalImage;
     navController.tabBarItem.selectedImage = normalSelectImage;

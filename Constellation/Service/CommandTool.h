@@ -11,5 +11,9 @@
 @interface CommandTool : NSObject
 @property (nonatomic, strong)RACCommand *command_haveNewVersion; // 检查新版本
 
+@property (nonatomic, strong)RACCommand *command_isTest; //  是否为审核状态
+
+@property (nonatomic, strong)RACCommand *command_channel; // 开关接口
+
 
 @end

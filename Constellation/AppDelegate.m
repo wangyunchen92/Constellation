@@ -41,7 +41,7 @@
     // 统计组件配置
     [MobClick setScenarioType:E_UM_NORMAL];
     //发布需要移除
-    [UMConfigure setEncryptEnabled:YES];
+//  [UMConfigure setEncryptEnabled:YES];
     
     [UMConfigure setLogEnabled:YES];
 }
@@ -57,7 +57,43 @@
     RACSubject *subject_init = [[RACSubject alloc] init];
     CommandTool *command = [[CommandTool alloc] init];
     
-    [[[[subject_init  flattenMap:^RACStream *(id value) {
+    [[[[[[subject_init flattenMap:^RACStream *(id value) {
+        // APP 是否为审核状态
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [[command.command_isTest.executionSignals switchToLatest] subscribeNext:^(id x) {
+                [subscriber sendNext:@YES];
+                [subscriber sendCompleted];
+            }];
+            
+            [command.command_isTest.errors subscribeNext:^(id x) {
+                [subscriber sendNext:@YES];
+                [subscriber sendCompleted];
+            }];
+            [command.command_isTest execute:@YES];
+            
+            return nil;
+        }];
+
+        
+    }] flattenMap:^RACStream *(id value) {
+        // App 开关
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            [[command.command_channel.executionSignals switchToLatest] subscribeNext:^(id x) {
+                [subscriber sendNext:@YES];
+                [subscriber sendCompleted];
+            }];
+            
+            [command.command_channel.errors subscribeNext:^(id x) {
+                [subscriber sendNext:@YES];
+                [subscriber sendCompleted];
+            }];
+            [command.command_channel execute:@YES];
+            
+            return nil;
+        }];
+        
+    }] flattenMap:^RACStream *(id value) {
            // App更新
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             if ([UserDefaultsTool getBoolWithKey:isFirstLogin]) {
@@ -81,16 +117,16 @@
     }] flattenMap:^RACStream *(id value) {
         // APP 广告页面
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                HZLaunchImageViewController *launchVC = [[HZLaunchImageViewController alloc] init];
-                launchVC.block_activityViewClicked = ^(ActivityViewClickedTag clickedTag){
-                    if (!(clickedTag == kActivityViewClickedView)) {
+//                HZLaunchImageViewController *launchVC = [[HZLaunchImageViewController alloc] init];
+//                launchVC.block_activityViewClicked = ^(ActivityViewClickedTag clickedTag){
+//                    if (!(clickedTag == kActivityViewClickedView)) {
                         [subscriber sendNext:@YES];
                         [subscriber sendCompleted];
-                    } else {
-                        
-                    }
-                };
-                self.window.rootViewController = launchVC;
+//                    } else {
+//
+//                    }
+//                };
+//                self.window.rootViewController = launchVC;
             
             return nil;
         }];

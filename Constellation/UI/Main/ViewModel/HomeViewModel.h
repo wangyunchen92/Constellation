@@ -10,7 +10,10 @@
 
 @interface HomeViewModel : BaseViewModel
 @property (nonatomic, strong)ConstellaDetailModel *model;
+@property (nonatomic, strong)RACSubject *subject_isRedPacket;
 @property (nonatomic, strong)NSMutableArray *serverArray;
+@property (nonatomic, strong)NSMutableArray *bannerArray;
 
+@property (nonatomic, copy)void (^block_redPacket)(NSString *url,NSString *image);
 
 @end

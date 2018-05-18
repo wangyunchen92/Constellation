@@ -27,7 +27,7 @@
     self.titleLabel.text = model.titleString;
     self.dateLabel.text = model.dateString;
     [self.imageViewArray enumerateObjectsUsingBlock:^(UIImageView * obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj sd_setImageWithURL:[NSURL URLWithString:[model.iamgeArray objectAtIndex:idx]] placeholderImage:IMAGE_NAME(@"有效期(信用卡正面)")];
+        [obj sd_setImageWithURL:[NSURL URLWithString:[model.iamgeArray objectAtIndex:idx]] placeholderImage:IMAGE_NAME(@"timg")];
     }];
     
     if (model.isread) {
